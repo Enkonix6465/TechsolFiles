@@ -1,0 +1,504 @@
+.industries-section {
+  background: linear-gradient(black, #143);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.industry-card {
+  background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.2));
+  border: 1px solid gold;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.industry-card:hover {
+  background: gold;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gold;
+}
+
+
+.industries-section {
+  background: linear-gradient(black, #143);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+
+  /* ✨ Add gold lines on left and right */
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+
+  /* Optional: give it some breathing room on bigger screens */
+  margin: 0 auto;
+  max-width: 1200px;
+  box-shadow: 0 0 20px gold;
+}
+
+.case-studies-section {
+  background: linear-gradient(#143, black, #143 );
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+
+  /* GOLD FRAME */
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+
+  /* Layout spacing */
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px gold;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.case-card {
+  background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.2));
+  border: 1px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.case-card:hover {
+  background: gold;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px gold;
+}
+
+
+
+.client-logos-section {
+  background: linear-gradient(black, #143);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+
+  /* ✨ Golden Borders */
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px gold;
+}
+
+.client-logos-section .section-title {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 40px;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-grid img {
+  max-width: 100px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9) contrast(1.2);
+}
+
+.logo-grid img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) contrast(1.4);
+  box-shadow: 0 0 10px gold;
+}
+.logo-grid img {
+  max-width: 100px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9) contrast(1.2);
+
+  /* 🎯 One-corner radius style */
+  border-top-left-radius: 20px;
+
+  background-color: white; /* optional - shows the corner better */
+  padding: 10px; /* adds breathing space around the image */
+}
+
+
+.approach-section {
+  background: linear-gradient(#143, black, #143 );
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border: 2px solid gold;
+  border-left: 4px solid gold;
+  border-right: 4px solid gold;
+  box-shadow: 0 0 25px gold;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.approach-section .section-title {
+  font-size: 2.7rem;
+  color: gold;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.step {
+  background: linear-gradient(to right, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2));
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 20px 30px;
+  min-width: 180px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.step:hover {
+  background: gold;
+  color: black;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+
+
+
+.team-section {
+  background: linear-gradient(black, #143);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px gold;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid gold;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  color: gold;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 8px;
+}
+.team-section {
+  background: linear-gradient(black, #143);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  border-left: 2px solid gold;
+  border-right: 2px solid gold;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px gold;
+  border-radius: 20px;
+}
+.team-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid gold;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 0 15px gold;
+}
+
+.team-photo:hover {
+  transform: rotate(360deg);
+}
+
+
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid gold;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 0 15px gold;
+  z-index: 1;
+  position: relative;
+}
+
+.team-photo:hover {
+  transform: rotate(360deg);
+}
+
+/* Confetti canvas styling */
+.confetti-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+
+
+.industry-card {
+  background-color: #2e2e42;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.industry-card:hover {
+  background-color: #3f3f5e;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+
+
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+
+body {
+  background: black;
+  color: #333;
+}

@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techsol| Cloud</title>
+	 <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
+   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      </div>
+      <nav class="nav-center">
+    <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+      </ul>
+    </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+  
+  </nav>
+    </div>
+  </header>
+
+<body>
+  <header class="healthcare-hero">
+    <!-- 🎥 Background Video -->
+    <video class="healthcare-bg-video" autoplay muted loop playsinline>
+      <source src="{% static 'images/product.mp4' %}" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- 🌈 Optional Overlay -->
+    <div class="healthcare-overlay"></div>
+  
+    <!-- 💬 Text Content -->
+    <div class="healthcare-content">
+      <h1> Retail & E-commerce</h1>
+      <p>Next-gen shopping experiences powered by smart tech & innovation.</p>
+    </div>
+  </header>
+    
+  
+    <main>
+      <section class="overview-section">
+    <h2>Overview</h2>
+    <p>Boost sales with intelligent e-commerce solutions and personalized shopping experiences.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/retail/Personalized Recommendations.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Personalized Recommendations:</strong></h3>
+        <p>Leverage customer data to suggest personalized products and increase sales conversion.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/retail/Secure Payment Gateways.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Secure Payment Gateways:</strong></h3>
+        <p>Offer customers safe and seamless payment options for a better shopping experience.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/retail/Inventory Management.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Inventory Management:</strong></h3>
+        <p>Efficiently manage inventory, stock levels, and order fulfillment to optimize sales.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/retail/Mobile Shopping.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Mobile Shopping:</strong></h3>
+        <p>Provide a responsive and easy-to-navigate mobile platform for on-the-go shoppers.</p>
+      </div>
+      
+    </div>
+  </section>
+  
+      <section class="services-section">
+    <h2>Our E-commerce Solutions</h2>
+    <p>Explore our advanced e-commerce services that are designed to enhance customer experience, streamline operations, and boost sales.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Custom E-commerce Platforms</strong></h3>
+        <p>We design and develop tailored e-commerce platforms that suit your business needs, enhancing customer engagement and driving sales.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Inventory & Logistics Management</strong></h3>
+        <p>Efficient systems for managing inventory and logistics, ensuring real-time stock updates, order processing, and on-time delivery.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Personalized Product Recommendations</strong></h3>
+        <p>AI-powered recommendation engines that personalize product suggestions for each user, improving conversion rates and customer satisfaction.</p>
+      </div>
+    </div>
+  </section>
+  
+    </main>
+    
+  <section class="services-section">
+    <h2>Success Stories</h2>
+    <p>Real transformations powered by our e-commerce technology solutions.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>John Smith</h3>
+        <p>"The personalized product recommendations helped me find exactly what I was looking for, boosting my shopping experience."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Sarah Johnson</h3>
+        <p>"The secure payment gateway made my transactions quick and safe. I feel confident shopping online now."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Retail Manager</h3>
+        <p>"The AI-driven personalized recommendations have led to a significant increase in our sales conversion rate."</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-section">
+    <h2>Impact Metrics</h2>
+    <p>Our technology in action, by the numbers.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>20%</h3>
+        <p>Increase in sales conversion through personalized recommendations</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>100K+</h3>
+        <p>Mobile shopping users globally</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>85%</h3>
+        <p>Customer satisfaction rate</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>500+</h3>
+        <p>Retailers using our inventory management system</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-section" id="global-reach-section">
+    <h2>Global Reach</h2>
+    <p>Providing secure and scalable e-commerce solutions to every corner of the world.</p>
+    <div class="video-container" style="position: relative; overflow: hidden; border-radius: 15px;">
+      <video id="healthcare-video" autoplay loop muted style="width: 100%; height: auto;">
+        <source src="{% static 'images/E-commerce.mp4' %}" type="video/mp4" />
+        
+        Your browser does not support the video tag.
+      </video>
+    <button id="play-button" class="play-button">Play Video</button>
+    </div>
+  </section>
+
+  </main>
+  
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+  
+      
+  
+  
+  
+     <!-- Part 2: Quick Links -->
+     <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+      </ul>
+    </div>
+  
+  
+      <!-- Part 3: Our Services -->
+      <div class="footer-part footer-services">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="services-links">
+          <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+          <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+          <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+          <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+          <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+          <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+          <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+        </ul>
+      </div>
+  
+  
+     
+     <!-- Part 4: Reserved for later -->
+     <div class="cta-section">
+      <p class="cta-text">
+        Let’s get started on something great.<br>
+        Our team of IT experts looks forward to meeting with you<br>
+        📞 9108191003<br>
+        ✉️ info@Techsol.com
+      </p>
+      <a href="contact.html" class="cta-button">Get an appointment now</a>
+    </div>
+  </div>
+  
+    </div>
+  </footer>
+  
+  
+  
+  <footer class="footer">
+      <div class="footer-location-row">
+        <div class="footer-title">Our Location</div>
+        <div class="location-scroll">
+          <div class="location-item" 
+               onmouseover="showLocationDetails('india-info')" 
+               onmouseout="hideLocationDetails('india-info')" 
+               onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+            <img src="https://flagcdn.com/in.svg" alt="India" />
+            <span>India</span>
+            <div class="location-info" id="india-info">
+              <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('usa-info')" 
+               onmouseout="hideLocationDetails('usa-info')" 
+               onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+            <img src="https://flagcdn.com/us.svg" alt="USA" />
+            <span>USA</span>
+            <div class="location-info" id="usa-info">
+              <p>250 Vesey St, New York, NY 10281</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('uk-info')" 
+               onmouseout="hideLocationDetails('uk-info')" 
+               onclick="openPopup('UK', 'Techsol UK, London, UK')">
+            <img src="https://flagcdn.com/gb.svg" alt="UK" />
+            <span>UK</span>
+            <div class="location-info" id="uk-info">
+              <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('australia-info')" 
+               onmouseout="hideLocationDetails('australia-info')" 
+               onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+            <img src="https://flagcdn.com/au.svg" alt="Australia" />
+            <span>Australia</span>
+            <div class="location-info" id="australia-info">
+              <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Popup -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-card">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h3 id="popup-title">Location Title</h3>
+          <p id="popup-address">Address details will appear here.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br>
+  
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+      <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+    
+  
+   </div>
+  </footer>
+  
+  <br>
+  
+  <script src="{% static 'js/style.js' %}"></script>
+  
+  </body>
+  </html>

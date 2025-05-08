@@ -1,0 +1,485 @@
+/* General styles for the intro section */
+.intro {
+  text-align: center; /* Center content */
+  padding: 60px 30px; /* Add padding for space */
+  background: linear-gradient(white 0.5%,black, black, white); /* Gradient background for visual appeal */
+  color: white; /* Text color */
+  border-radius: 20px; /* Rounded corners for a smooth look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  margin: 40px auto; /* Spacing around the section */
+  max-width: 1200px; /* Limit width for readability */
+  transition: transform 1s ease, opacity 1s ease; /* Smooth transitions for the animation */
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.95); /* Slightly zoomed-out effect */
+}
+
+/* Styling for the header */
+.intro h2 {
+  font-size: 3rem; /* Larger title for impact */
+  font-weight: 700; /* Bold font for emphasis */
+  letter-spacing: 2px; /* Letter spacing for a modern touch */
+  margin-bottom: 20px; /* Space below the header */
+  text-transform: uppercase; /* All caps for a more professional appearance */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the text */
+  color: gold;
+}
+
+/* Styling for the paragraph */
+.intro p {
+  font-size: 1.2rem; /* Slightly larger text */
+  line-height: 1.6; /* Increased line height for readability */
+  margin: 0 auto; /* Center the paragraph */
+  max-width: 800px; /* Limit width for better readability */
+  color: #f4f4f4; /* Light text color */
+}
+
+/* Adding animation class for fade-in and zoom effect */
+.intro.show {
+  opacity: 1; /* Fade in */
+  transform: scale(1); /* Zoom in to original size */
+}
+
+/* Keyframe animation for smooth zoom-in effect */
+@keyframes zoomInEffect {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation */
+.intro {
+  animation: zoomInEffect 2s ease-out forwards;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .intro h2 {
+    font-size: 2rem;
+  }
+  
+  .intro p {
+    font-size: 1rem;
+  }
+  
+  .intro {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+
+
+.cloud-journey {
+  background: linear-gradient(black, #143,black);
+  color: #fff;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.cloud-journey h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: gold;
+}
+
+.cloud-journey p {
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.journey-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.step {
+  background: rgba(gold, 255, black, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+   box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3); /* Gold shadow */
+}
+
+.step span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Service Cards Section */
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 30px;
+  background: linear-gradient(black, #143,black);
+  margin-top: 50px;
+    min-height: 70vh;
+}
+
+.glass-card {
+  position: relative;
+  width: 22%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  height: 300px;
+  
+}
+
+/* Image and Overlay Styles */
+.card-image {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card:hover .card-img {
+  transform: translateX(-40%); /* Moves image to the left */
+}
+
+.glass-card:hover .overlay-text {
+  opacity: 1; /* Reveals the text */
+}
+
+/* Content Styling */
+.card-content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.glass-card:hover .card-content {
+  bottom: 0; /* Slides content up when hovered */
+}
+
+/* Card Text */
+.card-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card-content ul {
+  list-style-type: none;
+  padding: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.card-content ul li {
+  margin: 10px 0;
+}
+
+/* Hover effect on card */
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .glass-card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .service-cards {
+    justify-content: center;
+	background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(black, #143,black);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-content {
+  padding: 20px;
+  background-color: black;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover .card-image .card-img {
+  opacity: 0; /* Hide the image */
+}
+
+.glass-card:hover .overlay-text {
+  opacity: 1; /* Show the overlay text */
+}
+
+.glass-card:hover .card-content {
+  opacity: 1; /* Show the content */
+  transform: translateY(0); /* Slide the content in */
+}
+
+.glass-card:hover {
+  transform: scale(1.05);
+}
+
+.glass-card h3 {
+  margin-bottom: 10px;
+}
+
+.glass-card ul {
+  padding-left: 20px;
+}
+
+.glass-card ul li {
+  margin: 5px 0;
+}
+
+
+.highlight-title {
+  color: gold; /* Bright blue */
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.highlight-description {
+  color: gray; /* Dark gray */
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.highlight-list li {
+  color: white; /* Leafy green for fresh vibes */
+  font-size: 0.95rem;
+  padding-left: 10px;
+  margin: 6px 0;
+  position: relative;
+}
+
+.highlight-list li::before {
+  content: "✔";
+  color: white;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown.show .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.card-label {
+  position: absolute;
+  top: 260px;
+  left: 50px;
+  background-color: rgba(255, 255, 255, 0.1); /* slight transparency */
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+  backdrop-filter: blur(10px); /* 🔥 this gives the blur effect */
+  -webkit-backdrop-filter: blur(100px); /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* optional: adds that subtle border */
+}
+
+
+
+
+
+/* Hide the label on hover */
+.glass-card:hover .card-label {
+  opacity: 0; /* Hide the label */
+  pointer-events: none; /* Prevent clicking the label */
+}
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+
+
+
+
+

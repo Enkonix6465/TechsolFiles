@@ -1,0 +1,330 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techsol| Cloud</title>
+	 <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
+   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      </div>
+      <nav class="nav-center">
+    <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+      </ul>
+    </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+  
+  </nav>
+    </div>
+  </header>
+
+<body>
+  <header class="healthcare-hero">
+    <!-- 🎥 Background Video -->
+    <video class="healthcare-bg-video" autoplay muted loop playsinline>
+      <source src="{% static 'images/mannu.mp4' %}" type="video/mp4" />
+      
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- 🌈 Optional Overlay -->
+    <div class="healthcare-overlay"></div>
+  
+    <!-- 💬 Text Content -->
+    <div class="healthcare-content">
+       <h1> Manufacturing Innovations</h1>
+      <p>Empowering industries with cutting-edge manufacturing technology and automation.</p>
+    </div>
+  </header>
+   
+  
+    <main>
+      <section class="overview-section">
+    <h2>Overview</h2>
+    <p>Smart factories with automation, robotics, and real-time analytics.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/mannu/Automation.gif' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Automation:</strong></h3>
+        <p>Optimizing production with automated systems for higher efficiency and reduced human error.</p>
+      </div>
+     
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/mannu/Real-Time Analytics.gif' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Real-Time Analytics:</strong></h3>
+        <p>Utilizing data and analytics to monitor production, predict issues, and optimize workflows.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/mannu/Predictive Maintenance.gif' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Predictive Maintenance:</strong></h3>
+        <p>Using IoT sensors and AI to predict equipment failures before they occur, reducing downtime.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/mannu/Smart Manufacturing Software.gif' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Smart Manufacturing Software:</strong></h3>
+        <p>Comprehensive platforms to manage production, monitor assets, and streamline operations in real-time.</p>
+      </div>
+    </div>
+  </section>
+  
+      <section class="services-section">
+    <h2>Manufacturing Solutions</h2>
+    <p>Enhancing manufacturing efficiency and productivity through cutting-edge technologies like automation, predictive maintenance, and smart supply chains.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Smart Assembly Lines</strong></h3>
+        <p>Revolutionize production with automated, intelligent assembly lines that reduce manual effort, increase precision, and boost throughput.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Predictive Maintenance</strong></h3>
+        <p>Utilize data-driven insights to predict equipment failures and minimize downtime, ensuring optimal performance and cost efficiency.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Supply Chain Digitization</strong></h3>
+        <p>Streamline your supply chain by digitizing processes, enhancing tracking, reducing errors, and improving inventory management with real-time data.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="services-section">
+    <h2>Success Stories</h2>
+    <p>Real transformations powered by our manufacturing technology solutions.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>David Miller</h3>
+        <p>"The automation and robotics solutions have drastically improved our factory’s production speed and reduced manual errors."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Julia Roberts</h3>
+        <p>"Predictive maintenance has significantly reduced downtime and improved our operational efficiency across the plant."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Factory Manager</h3>
+        <p>"The smart manufacturing software we implemented has helped us monitor assets in real-time and streamline our entire production process."</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-section">
+    <h2>Impact Metrics</h2>
+    <p>Our technology in action, by the numbers.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>50%</h3>
+        <p>Reduction in production errors with automation implementation</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>40%</h3>
+        <p>Decrease in downtime through predictive maintenance</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>30%</h3>
+        <p>Increased production efficiency with real-time analytics</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>25%</h3>
+        <p>Improvement in inventory management with supply chain digitization</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-section" id="global-reach-section">
+    <h2>Global Reach</h2>
+    <p>Providing secure and scalable e-commerce solutions to every corner of the world.</p>
+    <div class="video-container" style="position: relative; overflow: hidden; border-radius: 15px;">
+      <video id="healthcare-video" autoplay loop muted style="width: 100%; height: auto;">
+        <source src="{% static 'images/man.mp4' %}" type="video/mp4" />
+        
+        Your browser does not support the video tag.
+      </video>
+    <button id="play-button" class="play-button">Play Video</button>
+    </div>
+  </section>
+  
+  
+
+  </main>
+  
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+  
+      
+  
+  
+  
+     <!-- Part 2: Quick Links -->
+     <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+      </ul>
+    </div>
+  
+  
+      <!-- Part 3: Our Services -->
+      <div class="footer-part footer-services">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="services-links">
+          <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+          <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+          <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+          <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+          <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+          <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+          <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+        </ul>
+      </div>
+  
+  
+     
+     <!-- Part 4: Reserved for later -->
+     <div class="cta-section">
+      <p class="cta-text">
+        Let’s get started on something great.<br>
+        Our team of IT experts looks forward to meeting with you<br>
+        📞 9108191003<br>
+        ✉️ info@Techsol.com
+      </p>
+      <a href="contact.html" class="cta-button">Get an appointment now</a>
+    </div>
+  </div>
+  
+    </div>
+  </footer>
+  
+  
+  
+  <footer class="footer">
+      <div class="footer-location-row">
+        <div class="footer-title">Our Location</div>
+        <div class="location-scroll">
+          <div class="location-item" 
+               onmouseover="showLocationDetails('india-info')" 
+               onmouseout="hideLocationDetails('india-info')" 
+               onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+            <img src="https://flagcdn.com/in.svg" alt="India" />
+            <span>India</span>
+            <div class="location-info" id="india-info">
+              <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('usa-info')" 
+               onmouseout="hideLocationDetails('usa-info')" 
+               onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+            <img src="https://flagcdn.com/us.svg" alt="USA" />
+            <span>USA</span>
+            <div class="location-info" id="usa-info">
+              <p>250 Vesey St, New York, NY 10281</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('uk-info')" 
+               onmouseout="hideLocationDetails('uk-info')" 
+               onclick="openPopup('UK', 'Techsol UK, London, UK')">
+            <img src="https://flagcdn.com/gb.svg" alt="UK" />
+            <span>UK</span>
+            <div class="location-info" id="uk-info">
+              <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('australia-info')" 
+               onmouseout="hideLocationDetails('australia-info')" 
+               onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+            <img src="https://flagcdn.com/au.svg" alt="Australia" />
+            <span>Australia</span>
+            <div class="location-info" id="australia-info">
+              <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Popup -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-card">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h3 id="popup-title">Location Title</h3>
+          <p id="popup-address">Address details will appear here.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br>
+  
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+      <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+    
+  
+   </div>
+  </footer>
+  
+  <br>
+  
+  <script src="{% static 'js/style.js' %}"></script>
+  
+  </body>
+  </html>

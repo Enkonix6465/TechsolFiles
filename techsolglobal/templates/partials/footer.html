@@ -1,0 +1,50 @@
+<footer class="footer-section">
+    <div class="footer-container">
+  
+      <div class="footer-part footer-quick-links">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}" class="hover:text-teal-400 transition">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'industries' %}">Industries</a></li>
+          <li><a href="{% url 'careers' %}">Careers</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-part footer-services">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="services-links">
+          <li><a href="{% url 'cloud' %}">Cloud</a></li>
+          <li><a href="{% url 'application_development' %}">Application Development & Management</a></li>
+          <li><a href="{% url 'cognitive_operations' %}">Cognitive Business Operations</a></li>
+          <li><a href="{% url 'data_analytics' %}">Data & Analytics</a></li>
+          <li><a href="{% url 'network_solutions' %}">Network Solutions & Services</a></li>
+          <li><a href="{% url 'it_consulting' %}">IT Consulting</a></li>
+          <li><a href="{% url 'software_training' %}">Software Training</a></li>
+        </ul>
+      </div>
+  
+      <div class="cta-section">
+        <p class="cta-text">
+          Let’s get started on something great.<br>
+          Our team of IT experts looks forward to meeting with you<br>
+          and providing valuable insights tailored to your business.
+        </p>
+        <a href="{% url 'contact' %}" class="cta-button">Get an appointment now</a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <img src="{% static 'media/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+      <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+      <a href="{% url 'terms' %}">Terms of Use</a> | <a href="{% url 'privacy' %}">Privacy Policy</a>
+    </div>
+  
+    <div class="footer-right">
+      <!-- Social media icons -->
+      <!-- Keep your SVG icons here just like in your original -->
+    </div>
+  </footer>

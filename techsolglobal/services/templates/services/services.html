@@ -1,0 +1,351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>techsol | Services</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/services.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+ 
+
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+    </div>
+    <nav class="nav-center">
+  <!-- HTML -->
+<ul class="nav-links relative">
+  <li><a href="{% url 'index:index' %}">Home</a></li>
+  <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+
+  <!-- Dropdown wrapper -->
+  <li class="dropdown">
+    <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+    <ul class="dropdown-menu">
+      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+    </ul>
+  </li>
+
+ 
+  <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+  <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+   <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
+</ul>
+
+</nav>
+  </div>
+</header>
+
+<section class="services-section">
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-subtitle">We deliver world-class tech solutions that go beyond just functionality — we innovate, optimize, and future-proof your business. Whether it's cloud integration, intelligent automation, custom applications, or real-time data insights, we craft scalable solutions that accelerate growth, drive digital transformation, and keep you ahead in a rapidly evolving digital world.</p>
+
+  <!-- Service Card 1 -->
+  <a href="{% url 'services:cloud' %}" style="text-decoration: none; color: inherit;">
+    <div class="service-card">
+      <div class="service-image">
+        <img src="{% static 'images/cloud.jpg' %}" alt="Cloud Service">
+    </div>
+    <div class="service-text">
+      <h3>Cloud</h3>
+      <p>
+ 1- Seamless migration from legacy systems with zero downtime.<br>
+ 2- End-to-end data protection with high availability and disaster recovery.<br>
+ 3- Expertise across AWS, Azure, and hybrid cloud environments.<br>
+ 4- Real-time monitoring, performance optimization, and auto-scaling features.<br>
+ 5- Cost-efficient architecture tailored to your business size and scale.<br>
+ 6- Custom strategies that drive innovation, agility, and long-term success.
+</p>
+
+
+    </div>
+  </div>
+
+  <!-- Service Card 2 -->
+  <div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/App Development.jpg' %}" alt="App Development">
+    </div>
+    <div class="service-text">
+      <h3> App Development</h3>
+     <p>
+1- Custom-built applications tailored to your business needs.<br>
+2- High-performance architecture optimized for speed and scalability.<br>
+3- Cross-platform development for web, iOS, and Android.<br>
+4- Intuitive UI/UX designs that enhance user engagement.<br>
+5- Thorough testing to ensure bug-free, secure deployment.<br>
+6- Ongoing maintenance, updates, and post-launch support.<br>
+7- From idea to execution — we handle the entire app lifecycle.
+</p>
+    </div>
+  </div>
+
+  <!-- Service Card 3 -->
+  <div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/Cognitive Ops.jpg' %}" alt="Cognitive Ops">
+    </div>
+    <div class="service-text">
+      <h3>Cognitive Ops</h3>
+      <p>
+1- Leverage AI and automation to streamline repetitive tasks.<br>
+2- Analyze large datasets for faster, smarter decision-making.<br>
+3- Automate workflows to boost efficiency and consistency.<br>
+4- Reduce operational costs through intelligent process optimization.<br>
+5- Real-time insights and alerts for proactive problem-solving.<br>
+6- Seamless integration with existing tools and systems.<br>
+7- Scalable solutions tailored for modern digital enterprises.
+</p>
+    </div>
+  </div>
+<div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/Data & Analytics.jpg' %}" alt="Data & Analytics">
+    </div>
+    <div class="service-text">
+      <h3>Data & Analytics</h3>
+      <p>
+1- Collect and consolidate data from multiple sources effortlessly.<br>
+2- Uncover hidden patterns with advanced analytics and AI models.<br>
+3- Build dashboards and reports for real-time decision-making.<br>
+4- Empower teams with predictive and prescriptive insights.<br>
+5- Ensure data quality, security, and compliance at every step.<br>
+6- Seamless integration with BI tools like Power BI, Tableau, and more.<br>
+7- Drive innovation through data-driven strategies and automation.
+</p>
+    </div>
+  </div>
+<div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/Network Solutions.jpg' %}" alt="Network Solutions">
+    </div>
+    <div class="service-text">
+      <h3> Network Solutions</h3>
+      <p>
+1- Build secure, high-speed networks tailored to your infrastructure.<br>
+2- Ensure seamless connectivity across offices, data centers, and cloud.<br>
+3- Optimize performance with intelligent routing and traffic management.<br>
+4- Implement advanced firewalls and threat protection systems.<br>
+5- Enable reliable remote access with VPN and SD-WAN solutions.<br>
+6- Monitor network health in real-time with analytics and alerts.<br>
+7- Scalable architecture to grow with your business needs.
+</p>
+    </div>
+  </div>
+<div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/IT Consulting.jpg' %}" alt="IT Consulting">
+    </div>
+    <div class="service-text">
+      <h3>IT Consulting</h3>
+      <p>
+1- Strategic guidance to align IT with your business objectives.<br>
+2- Tailored tech roadmaps for digital transformation and innovation.<br>
+3- Improve operational efficiency with the right tools and platforms.<br>
+4- Conduct in-depth assessments and risk analysis for smarter decisions.<br>
+5- Collaborate on vendor selection, migration, and implementation.<br>
+6- Accelerate growth through future-ready IT strategies.<br>
+7- Flexible consulting models to match your pace and budget.
+</p>
+    </div>
+  </div>
+<div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/Software Training.jpg' %}" alt="Software Training">
+    </div>
+    <div class="service-text">
+      <h3>Software Training</h3>
+      <p>
+1- Hands-on training sessions on modern tech stacks and frameworks.<br>
+2- Curated learning paths for beginners to advanced professionals.<br>
+3- Boost team productivity with real-world project-based learning.<br>
+4- Covering tools like Git, Docker, Kubernetes, React, .NET, and more.<br>
+5- Role-specific training to meet business and technical goals.<br>
+6- Track progress with assessments, certifications, and analytics.<br>
+7- Flexible training formats: live, recorded, or hybrid sessions.
+</p>
+    </div>
+  </div>
+
+
+ 
+</section>
+
+
+
+
+
+
+
+<br>
+  
+  <!-- 📰 NEWS SECTION -->
+  <section class="news-section">
+    <div class="container">
+      <h2 class="section-title">Latest News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <h4> AWS Partnership</h4>
+          <p>TechSol collaborates with AWS to deliver top-tier cloud services worldwide.</p>
+        </div>
+        <div class="news-card">
+          <h4> Hyderabad Data Center</h4>
+          <p>We’re expanding our presence with a high-speed, secure data center in India.</p>
+        </div>
+        <div class="news-card">
+          <h4> Internship Launch 2025</h4>
+          <p>Calling all techies — grow with us through our elite internship program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<script src="{% static 'js/service.js' %}"></script>
+<script src="{% static 'js/stlye.js' %}"></script>
+
+<br>
+<br>
+<br>
+
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    
+
+
+
+    <!-- Part 2: Quick Links -->
+    <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="{% url 'index:index' %}"  class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+        
+      </ul>
+    </div>
+
+
+    <!-- Part 3: Our Services -->
+    <div class="footer-part footer-services">
+      <h3 class="footer-heading">Our Services</h3>
+      <ul class="services-links">
+        <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+      </ul>
+    </div>
+    
+
+
+   
+   <!-- Part 4: Reserved for later -->
+   <div class="cta-section">
+    <p class="cta-text">
+      Let’s get started on something great.<br>
+      Our team of IT experts looks forward to meeting with you<br>
+      📞 9108191003<br>
+      ✉️ info@Techsol.com
+    </p>
+    <a href="contact.html" class="cta-button">Get an appointment now</a>
+  </div>
+</div>
+
+  </div>
+</footer>
+
+
+
+<footer class="footer">
+    <div class="footer-location-row">
+      <div class="footer-title">Our Location</div>
+      <div class="location-scroll">
+        <div class="location-item" 
+             onmouseover="showLocationDetails('india-info')" 
+             onmouseout="hideLocationDetails('india-info')" 
+             onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+          <img src="https://flagcdn.com/in.svg" alt="India" />
+          <span>India</span>
+          <div class="location-info" id="india-info">
+            <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('usa-info')" 
+             onmouseout="hideLocationDetails('usa-info')" 
+             onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+          <img src="https://flagcdn.com/us.svg" alt="USA" />
+          <span>USA</span>
+          <div class="location-info" id="usa-info">
+            <p>250 Vesey St, New York, NY 10281</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('uk-info')" 
+             onmouseout="hideLocationDetails('uk-info')" 
+             onclick="openPopup('UK', 'Techsol UK, London, UK')">
+          <img src="https://flagcdn.com/gb.svg" alt="UK" />
+          <span>UK</span>
+          <div class="location-info" id="uk-info">
+            <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('australia-info')" 
+             onmouseout="hideLocationDetails('australia-info')" 
+             onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+          <img src="https://flagcdn.com/au.svg" alt="Australia" />
+          <span>Australia</span>
+          <div class="location-info" id="australia-info">
+            <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-card">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3 id="popup-title">Location Title</h3>
+        <p id="popup-address">Address details will appear here.</p>
+      </div>
+    </div>
+  </footer>
+  <br><br><br><br><br><br>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+    <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+	
+
+ </div>
+</footer>
+
+<br>
+<script src="{% static 'js/service.js' %}"></script>
+<script src="{% static 'js/style.js' %}"></script>
+</body>
+</html>

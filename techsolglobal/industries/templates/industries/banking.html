@@ -1,0 +1,337 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techsol| Cloud</title>
+	 <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
+   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      </div>
+      <nav class="nav-center">
+    <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+      </ul>
+    </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+  
+  </nav>
+    </div>
+  </header>
+
+<body>
+  <header class="healthcare-hero">
+    <!-- 🎥 Background Video -->
+    <video class="healthcare-bg-video" autoplay muted loop playsinline>
+      <source src="{% static 'images/bank11.mp4' %}" type="video/mp4" />
+    
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- 🌈 Optional Overlay -->
+    <div class="healthcare-overlay"></div>
+  
+    <!-- 💬 Text Content -->
+    <div class="healthcare-content">
+     <h1>Banking & Finance Solutions</h1>
+      <p>Empowering financial growth with secure and scalable tech solutions.</p>
+    </div>
+  </header>
+   
+  
+  
+    <main>
+     <section class="overview-section">
+    <h2>Overview</h2>
+    <p>Secure and scalable fintech solutions tailored for modern banking.</p>
+    <div class="card-container">
+      
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/bankingpage/Fraud Prevention.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Fraud Prevention:</strong></h3>
+        <p>Advanced algorithms to detect and prevent financial fraud in real-time.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/bankingpage/Mobile Banking.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>Mobile Banking:</strong></h3>
+        <p>Convenient banking services and account management through mobile apps.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <img src="{% static 'images/icons/bankingpage/AI & Automation.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+        <h3><strong>AI & Automation:</strong></h3>
+        <p>Using AI and automation to streamline banking operations and enhance customer experience.</p>
+      </div>
+    <div class="card">
+    <div class="card-icon"></div>
+    <img src="{% static 'images/icons/bankingpage/Instant Money Transfers.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
+    <h3><strong>Instant Money Transfers:</strong></h3>
+    <p>Fast, reliable, and secure money transfer solutions for individuals and businesses across borders.</p>
+  </div>
+  
+  
+  
+  
+  </section>
+  
+      <section class="services-section">
+    <h2>Our Services</h2>
+    <p>Explore our tailored fintech solutions that are designed to meet the needs of modern banking and financial services.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Mobile Banking Apps</strong></h3>
+        <p>Custom mobile banking applications offering seamless and secure transactions, account management, and financial services on-the-go.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Fraud Detection Systems</strong></h3>
+        <p>Advanced AI-driven systems that detect and prevent fraudulent activities in real-time, ensuring the security of financial transactions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3><strong>Robo-Advisory Platforms</strong></h3>
+        <p>Intelligent platforms powered by AI to provide personalized investment advice and portfolio management tailored to individual risk profiles.</p>
+      </div>
+    </div>
+  </section>
+  
+    </main>
+    
+  
+  
+  <section class="services-section">
+    <h2>Success Stories</h2>
+    <p>Real transformations powered by our banking technology solutions.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>John Smith</h3>
+        <p>"The mobile banking app made managing my finances easy and secure."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Sarah Johnson</h3>
+        <p>"Fraud prevention tools gave me peace of mind while transacting online."</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>Bank Manager</h3>
+        <p>"The AI-driven advisory platform increased our customers' engagement and satisfaction."</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="services-section">
+    <h2>Impact Metrics</h2>
+    <p>Our technology in action, by the numbers.</p>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>30%</h3>
+        <p>Reduction in financial fraud cases</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>50K+</h3>
+        <p>Mobile banking users globally</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>90%</h3>
+        <p>Customer satisfaction rate</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"></div>
+        <h3>100+</h3>
+        <p>Partner banks onboarded</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="services-section" id="global-reach-section">
+    <h2>Global Reach</h2>
+    <p>Providing secure and scalable banking solutions to every corner of the world.</p>
+    <div class="video-container" style="position: relative; overflow: hidden; border-radius: 15px;">
+      <video id="healthcare-video" autoplay loop muted style="width: 100%; height: auto;">
+        <source src="{% static 'images/banking.mp4' %}" type="video/mp4" />
+        
+        Your browser does not support the video tag.
+      </video>
+     <button id="play-button" class="play-button">Play Video</button>
+    </div>
+  </section>
+
+  </main>
+  
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+  
+      
+  
+  
+  
+     <!-- Part 2: Quick Links -->
+     <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+      </ul>
+    </div>
+  
+  
+      <!-- Part 3: Our Services -->
+      <div class="footer-part footer-services">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="services-links">
+          <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+          <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+          <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+          <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+          <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+          <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+          <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+        </ul>
+      </div>
+  
+  
+     
+     <!-- Part 4: Reserved for later -->
+     <div class="cta-section">
+      <p class="cta-text">
+        Let’s get started on something great.<br>
+        Our team of IT experts looks forward to meeting with you<br>
+        📞 9108191003<br>
+        ✉️ info@Techsol.com
+      </p>
+      <a href="contact.html" class="cta-button">Get an appointment now</a>
+    </div>
+  </div>
+  
+    </div>
+  </footer>
+  
+  
+  
+  <footer class="footer">
+      <div class="footer-location-row">
+        <div class="footer-title">Our Location</div>
+        <div class="location-scroll">
+          <div class="location-item" 
+               onmouseover="showLocationDetails('india-info')" 
+               onmouseout="hideLocationDetails('india-info')" 
+               onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+            <img src="https://flagcdn.com/in.svg" alt="India" />
+            <span>India</span>
+            <div class="location-info" id="india-info">
+              <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('usa-info')" 
+               onmouseout="hideLocationDetails('usa-info')" 
+               onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+            <img src="https://flagcdn.com/us.svg" alt="USA" />
+            <span>USA</span>
+            <div class="location-info" id="usa-info">
+              <p>250 Vesey St, New York, NY 10281</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('uk-info')" 
+               onmouseout="hideLocationDetails('uk-info')" 
+               onclick="openPopup('UK', 'Techsol UK, London, UK')">
+            <img src="https://flagcdn.com/gb.svg" alt="UK" />
+            <span>UK</span>
+            <div class="location-info" id="uk-info">
+              <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+            </div>
+          </div>
+  
+          <div class="location-item" 
+               onmouseover="showLocationDetails('australia-info')" 
+               onmouseout="hideLocationDetails('australia-info')" 
+               onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+            <img src="https://flagcdn.com/au.svg" alt="Australia" />
+            <span>Australia</span>
+            <div class="location-info" id="australia-info">
+              <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Popup -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-card">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h3 id="popup-title">Location Title</h3>
+          <p id="popup-address">Address details will appear here.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br>
+  
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+      <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+    
+  
+   </div>
+  </footer>
+  
+  <br>
+  
+  <script src="{% static 'js/style.js' %}"></script>
+  
+  </body>
+  </html>

@@ -1,0 +1,39 @@
+/* Target only links inside the header nav */
+header .no-underline-nav a {
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  border-bottom: none !important;
+}
+
+/* Remove unwanted border from li in header nav */
+header .no-underline-nav li {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+/* Reset link style ONLY in header */
+header .nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  border-bottom: none !important;
+}
+
+/* Remove any extra spacing or border in header list items */
+header .nav-links li {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Hover text color */
+header .nav-links a:hover {
+  color: #0077cc;
+}

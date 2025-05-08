@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Values</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %} "alt="Company Logo" />
+    </div>
+    <nav class="nav-center">
+  <!-- HTML -->
+<ul class="nav-links relative">
+  <li><a href="{% url 'index:index' %}">Home</a></li>
+
+  <!-- Dropdown wrapper -->
+  <li class="dropdown">
+    <a href="{% url 'services:services' %}" class="hover:text-teal-400 transition">Services</a>
+
+    <!-- Dropdown menu -->
+    <ul class="dropdown-menu">
+     <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+    <li><a href="{% url 'services:application_development' %}">Application Development and Management</a></li>
+    <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+    <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+    <li><a href="{% url 'services:network_solutions' %}">Network Solutions and Services</a></li>
+    <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+    <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+    </ul>
+  </li>
+
+  <li><a href="{% url 'industries:industries' %}" class="hover:text-teal-400 transition">Industries</a></li>
+  <li><a href="{% url 'careers:career' %}" class="hover:text-teal-400 transition">Careers</a></li>
+  <li><a href="{% url 'contact:contact' %}" class="hover:text-teal-400 transition">Contact Us</a></li>
+  
+</ul>
+
+</nav>
+  </div>
+</header>
+<section id="home" class="home-section" style="position: relative; overflow: hidden;">
+<!--------------------------------------------above part is releated to header--------------------------------------->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Values | Techsol Global Limited</title>
+  <link rel="stylesheet" href="{% static 'css/mission1.css' %} "  />
+</head>
+<body>
+<header class="center-header">
+  <h1>Our Core Values</h1>
+</header>
+<br>
+<br>
+<br>
+
+
+ 
+<section class="mission-section">
+  <h1>Guided by Purpose.Driven by Values.</h1> 
+  <p class="mission-paragraph">
+     At Techsol Global Limited, our core values shape every decision, drive innovation, and ensure we create lasting value for our clients, our people, and the world around us. These principles keep us grounded and future-focused.
+  </p>
+</section>
+
+
+
+    <!-- Tailwind version -->
+
+<section class="innovation-card">
+  <!-- 🎥 Left Side Video Card -->
+  <div class="card-left">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="{% static 'images/innovation-bg.mp4' %} " type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-title">Customer Centricity</div>
+  </div>
+
+  <!-- 📝 Right Side Content -->
+  <div class="card-right">
+    <p class="card-text">
+      We put our clients at the heart of everything we do, delivering outcomes that matter.
+    </p>
+  </div>
+</section>
+
+
+<section class="customer-card">
+  <!-- ✍️ Left Side Content -->
+  <div class="card-left">
+    <p class="card-text">
+      We pursue quality relentlessly and continuously improve to exceed expectations.
+    </p>
+  </div>
+
+  <!-- 🎥 Right Side Video Card -->
+  <div class="card-right">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="{% static 'images/Customer.mp4' %}" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-title">Excellence</div>
+  </div>
+</section>
+
+
+
+
+
+  </div>
+<footer class="footer-section">
+  <div class="footer-container">
+
+
+    <!-- Part 2: Quick Links -->
+<div class="footer-part footer-quick-links">
+  <h3 class="footer-heading">Quick Links</h3>
+  <ul class="nav-links">
+    <li><a href="{% url 'index:index' %}"class="hover:text-teal-400 transition">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" class="hover:text-teal-400 transition">About Us</a></li>
+    <li><a href="{% url 'services:services' %}" class="hover:text-teal-400 transition">Services</a></li>
+    <li><a href="{% url 'careers:career' %}" class="hover:text-teal-400 transition">Careers</a></li>
+    <li><a href="{% url 'contact:contact' %}" class="hover:text-teal-400 transition">Contact Us</a></li>
+  </ul>
+</div>
+
+
+    <!-- Part 3: Our Services -->
+<div class="footer-part footer-services">
+  <h3 class="footer-heading">Our Services</h3>
+  <ul class="services-links">
+    <li><a href="{% url 'services:cloud' %}" class="hover:text-teal-400 transition">Cloud</a></li>
+    <li><a href="{% url 'services:application_development' %}" class="hover:text-teal-400 transition">Application Development & Management</a></li>
+    <li><a href="{% url 'services:cognitive_operations' %}" class="hover:text-teal-400 transition">Cognitive Business Operations</a></li>
+    <li><a href="{% url 'services:data_analytics' %}" class="hover:text-teal-400 transition">Data & Analytics</a></li>
+    <li><a href="{% url 'services:network_solutions' %}" class="hover:text-teal-400 transition">Network Solutions & Services</a></li>
+    <li><a href="{% url 'services:it_advisory' %}" class="hover:text-teal-400 transition">IT Consulting</a></li>
+    <li><a href="{% url 'services:software_training' %}" class="hover:text-teal-400 transition">Software Training</a></li>
+  </ul>
+</div>
+
+
+    <!-- Part 4: Reserved for later -->
+    <div class="cta-section">
+      <p class="cta-text">
+        Let’s get started on something great.<br>
+        Our team of IT experts looks forward to meeting with you<br>
+        📞 9108191003<br>
+        ✉️ info@Techsol.com
+      </p>
+      <a href="Contact.html" class="cta-button">Get an appointment now</a>
+    </div>
+    </div>
+    
+    </div>
+    </footer>
+    <footer class="footer">
+      <div class="footer-location-row">
+        <div class="footer-title">Our Location</div>
+        <div class="location-scroll">
+          <div class="location-item" 
+               onmouseover="showLocationDetails('india-info')" 
+               onmouseout="hideLocationDetails('india-info')" 
+               onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+            <img src="https://flagcdn.com/in.svg" alt="India" />
+            <span>India</span>
+            <div class="location-info" id="india-info">
+              <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+            </div>
+          </div>
+    
+          <div class="location-item" 
+               onmouseover="showLocationDetails('usa-info')" 
+               onmouseout="hideLocationDetails('usa-info')" 
+               onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+            <img src="https://flagcdn.com/us.svg" alt="USA" />
+            <span>USA</span>
+            <div class="location-info" id="usa-info">
+              <p>250 Vesey St, New York, NY 10281</p>
+            </div>
+          </div>
+    
+          <div class="location-item" 
+               onmouseover="showLocationDetails('uk-info')" 
+               onmouseout="hideLocationDetails('uk-info')" 
+               onclick="openPopup('UK', 'Techsol UK, London, UK')">
+            <img src="https://flagcdn.com/gb.svg" alt="UK" />
+            <span>UK</span>
+            <div class="location-info" id="uk-info">
+              <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+            </div>
+          </div>
+    
+          <div class="location-item" 
+               onmouseover="showLocationDetails('australia-info')" 
+               onmouseout="hideLocationDetails('australia-info')" 
+               onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+            <img src="https://flagcdn.com/au.svg" alt="Australia" />
+            <span>Australia</span>
+            <div class="location-info" id="australia-info">
+              <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Popup -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-card">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h3 id="popup-title">Location Title</h3>
+          <p id="popup-address">Address details will appear here.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <footer class="site-footer">
+    <div class="footer-bottom">
+      <img src="{% static 'images/logo.png' %}"  alt="Techsol Logo" class="footer-logo-small" />
+      <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+    
+    
+    
+    </div>
+    </footer>
+    
+    <script src="{% static 'js/mission.js' %}"></script>
+    </body>
+    </html>
+    

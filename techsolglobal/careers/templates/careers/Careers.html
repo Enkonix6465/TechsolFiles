@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Webpage</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/Careers.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+    </div>
+    <nav class="nav-center">
+  <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+    <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+    <ul class="dropdown-menu">
+      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+    </ul>
+  </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+
+</nav>
+  </div>
+</header>
+
+
+<body>
+
+<!-- Hero Section -->
+<header class="hero">
+  <h1>Join the Techsol Tribe </h1>
+  <p>Innovate. Create. Grow with us.</p>
+ <a href= "{% url 'careers:career' %}" class="hero-btn">Explore Careers</a>
+
+</header>
+
+
+  <!-- Open Positions -->
+  <section class="section" id="careers">
+    <section class="section" id="openings">
+      <h2 data-aos="fade-up">Open Positions</h2>
+      <div class="job-listings">
+  
+        {% for job in jobs %}
+        <div class="job-card" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:100 }}">
+          <h3>{{ job.title }}</h3>
+          <p><strong>Location:</strong> {{ job.location }}</p>
+          <p>{{ job.description|linebreaksbr }}</p>
+          <a href="{% url 'careers:apply' %}?role={{ job.title|urlencode }}" class="apply-btn">Apply Now</a>
+        </div>
+        {% empty %}
+        <p>No job openings at the moment. Please check back later!</p>
+        {% endfor %}
+  
+      </div>
+    </section>
+  </section>
+
+  <!-- Why Techsol -->
+  <section class="section why-techsol">
+    <h2 data-aos="fade-up">Why Work at Techsol?</h2>
+    <div class="reasons">
+
+      <div class="reason" data-aos="fade-up">
+        <h4>💡 Innovation First</h4>
+        <p>From AI to Cloud — we stay ahead of the tech curve.</p>
+      </div>
+
+      <div class="reason" data-aos="fade-up" data-aos-delay="100">
+        <h4>🌍 Remote Friendly</h4>
+        <p>Work from anywhere, stay connected with awesome teams.</p>
+      </div>
+
+      <div class="reason" data-aos="fade-up" data-aos-delay="200">
+        <h4>🚀 Career Growth</h4>
+        <p>Upskill programs, mentorship & leadership opportunities.</p>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- Call to Action -->
+<section class="cta" data-aos="fade-up">
+  <h2>Didn’t find your role?</h2>
+  <p>Send your resume to <a href="mailto:hr@techsol.com">hr@techsol.com</a></p>
+  
+  </form>
+</section>
+
+  </section>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="{% static 'js/Careers.js' %}"></script>
+
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+  
+<!-- Part 2: Quick Links -->
+    <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+        
+      </ul>
+    </div>
+    
+    
+        <!-- Part 3: Our Services -->
+    <div class="footer-part footer-services">
+      <h3 class="footer-heading">Our Services</h3>
+      <ul class="services-links">
+        <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+      </ul>
+    </div>
+    
+    
+       
+       <!-- Part 4: Reserved for later -->
+       <div class="cta-section">
+        <p class="cta-text">
+          Let’s get started on something great.<br>
+          Our team of IT experts looks forward to meeting with you<br>
+          📞 9108191003<br>
+          ✉️ info@Techsol.com
+        </p>
+        <a href="{% url 'contact:contact' %}" class="cta-button">Get an appointment now</a>
+      </div>
+    </div>
+    
+      </div>
+    </footer>
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-location-row">
+          <div class="footer-title">Our Location</div>
+          <div class="location-scroll">
+            <div class="location-item" 
+                 onmouseover="showLocationDetails('india-info')" 
+                 onmouseout="hideLocationDetails('india-info')" 
+                 onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+              <img src="https://flagcdn.com/in.svg" alt="India" />
+              <span>India</span>
+              <div class="location-info" id="india-info">
+                <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+              </div>
+            </div>
+    
+            <div class="location-item" 
+                 onmouseover="showLocationDetails('usa-info')" 
+                 onmouseout="hideLocationDetails('usa-info')" 
+                 onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+              <img src="https://flagcdn.com/us.svg" alt="USA" />
+              <span>USA</span>
+              <div class="location-info" id="usa-info">
+                <p>250 Vesey St, New York, NY 10281</p>
+              </div>
+            </div>
+    
+            <div class="location-item" 
+                 onmouseover="showLocationDetails('uk-info')" 
+                 onmouseout="hideLocationDetails('uk-info')" 
+                 onclick="openPopup('UK', 'Techsol UK, London, UK')">
+              <img src="https://flagcdn.com/gb.svg" alt="UK" />
+              <span>UK</span>
+              <div class="location-info" id="uk-info">
+                <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+              </div>
+            </div>
+    
+            <div class="location-item" 
+                 onmouseover="showLocationDetails('australia-info')" 
+                 onmouseout="hideLocationDetails('australia-info')" 
+                 onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+              <img src="https://flagcdn.com/au.svg" alt="Australia" />
+              <span>Australia</span>
+              <div class="location-info" id="australia-info">
+                <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Popup -->
+        <div class="popup-overlay" id="popup">
+          <div class="popup-card">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3 id="popup-title">Location Title</h3>
+            <p id="popup-address">Address details will appear here.</p>
+          </div>
+        </div>
+      </footer>
+      
+      
+      
+      
+      
+      
+      <br><br> <br><br> <br><br> 
+    
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+        <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+      
+    
+     </div>
+    </footer>
+    
+    <br>
+    <script src="{% static 'js/industries.js' %}"></script>
+    <script src="{% static 'js/style.js' %}"></script>
+    
+    </body>
+    </html>
+  

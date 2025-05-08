@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Techsol Global Limited{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    {% block content %}
+    <!-- Page specific content will be inserted here -->
+    {% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static 'js/index.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

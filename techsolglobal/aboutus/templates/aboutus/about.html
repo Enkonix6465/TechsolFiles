@@ -1,0 +1,385 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Webpage</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %} " alt="Company Logo" />
+    </div>
+    <nav class="nav-center">
+  <!-- HTML -->
+<ul class="nav-links relative">
+  <li><a href="{% url 'index:index' %}">Home</a></li>
+  <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+
+  <!-- Dropdown wrapper -->
+  <li class="dropdown">
+    <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+    <ul class="dropdown-menu">
+      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+    </ul>
+  </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
+  </ul>
+
+</nav>
+  </div>
+</header>
+
+<main class="content">
+<section class="hero">
+  <img src="{% static 'images/back.jpg' %} " alt="Hero Background" class="hero-image" />
+  <div class="hero-content">
+    <h1>Welcome to Techsol Global</h1>
+    <p>Empowering the digital future with innovation, trust, and agility.</p>
+  </div>
+</section>
+
+
+
+  <section class="section" id="who-we-are">
+ <h3 style="text-align: center; color: gold;">Who We Are</h3>
+
+  <div class="who-we-are-container">
+    <div class="who-we-are-image">
+      <img src="{% static 'images/team.png' %} " alt="Techsol Team" />
+    </div>
+    <div class="who-we-are-text">
+      <p>
+        Techsol Global is a cutting-edge technology solutions company with a passion for solving real-world problems through innovative digital solutions. We're more than just techies – we’re creators, strategists, and disruptors driven by a purpose to power up progress through technology.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="section" id="what-we-do" style="padding: 3rem 1rem; background: linear-gradient(to right, #111, #1a1a1a); border-radius: 20px;">
+  <h3 style="text-align: center; color: gold; font-size: 2.5rem; text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5); margin-bottom: 2rem;">What We Do</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: auto;">
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      Custom Software Development
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      Cloud Infrastructure & DevOps
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      AI & Data-Driven Solutions
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      Mobile App Development
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      Cybersecurity Services
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      UX/UI Design & Consulting
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      Digital Transformation Consulting
+    </div>
+    <div style="background: rgba(255, 215, 0, 0.08); border: 1px solid gold; padding: 1.5rem; border-radius: 12px; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease;">
+      QA & Automation Testing Services
+    </div>
+  </div>
+</section>
+
+
+  <section class="section" id="core-values">
+  <h3 style="text-align: center; color: gold;">Our Core Values</h3>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <h4>Innovation</h4>
+        <p>We thrive on continuous innovation, pushing boundaries to create future-ready solutions.</p>
+      </div>
+      <div class="value-card">
+        <h4>Trust</h4>
+        <p>Integrity is at our core. We build relationships based on transparency, honesty, and respect.</p>
+      </div>
+      <div class="value-card">
+        <h4>Agility</h4>
+        <p>In a fast-paced world, our adaptable mindset helps us stay ahead of the curve.</p>
+      </div>
+      <div class="value-card">
+        <h4>Customer Obsession</h4>
+        <p>We don’t just serve clients — we walk with them at every step, turning ideas into impact.</p>
+      </div>
+      <div class="value-card">
+        <h4>Collaboration</h4>
+        <p>We believe in the power of teamwork — because great things happen when minds unite.</p>
+      </div>
+      <div class="value-card">
+        <h4>Responsibility</h4>
+        <p>From data to nature, we take responsibility seriously — aiming to create a better tomorrow.</p>
+      </div>
+      <div class="value-card">
+        <h4>Excellence</h4>
+        <p>We aim high and deliver higher — quality isn’t just a goal, it’s our default setting. </p>
+      </div>
+      <div class="value-card">
+        <h4>Growth Mindset</h4>
+        <p>Every challenge is an opportunity to learn, evolve, and level up — as individuals and as a team. </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sustainability" style="padding: 4rem 1rem; background: linear-gradient(to right, black, #143, black); border-radius: 20px; color: white;">
+  <h3 style="text-align: center; color: gold; font-size: 2.5rem; margin-bottom: 2rem; text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.4);">Corporate Sustainability</h3>
+  
+  <div style="max-width: 900px; margin: auto; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 2rem 2.5rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);">
+    <h4 style="font-size: 1.8rem; color: #90ee90; text-align: center; margin-bottom: 1.2rem;">🌿 Techsol's Green Code Initiative</h4>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; text-align: center;">
+      <strong style="color: #d4ed91;">Techsol Global</strong> is deeply committed to sustainability. Through our <span style="color: gold;">Green Code Initiative</span>, we aim to balance innovation with environmental impact.
+    </p>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; text-align: center;">
+      We plant a tree for every project we deliver — turning <span style="color: #9efea7;">digital growth</span> into <span style="color: #b4ffb1;">environmental growth</span>.
+      So far, we’ve offset <strong style="color: #aaffaa;">35.6 metric tons</strong> of carbon and counting.
+    </p>
+    
+    <p style="text-align: center; font-size: 1.2rem; font-weight: bold; color: #76ff03; margin-top: 1rem;">
+      🌱 It’s not just tech. It’s tech for good.
+    </p>
+  </div>
+</section>
+
+
+  <section class="section" id="team">
+  <h3 class="section-title">Meet Our Team</h3>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="team-container">
+    <div class="team-member-card">
+      <div class="team-img-container">
+        <img src="{% static 'images/mem1.png' %} " alt="Team Member 1" class="team-img">
+      </div>
+      <h4 class="team-name">John Doe</h4>
+      <p class="team-role">Chief Technology Officer</p>
+      <p class="team-description">A visionary leader with expertise in cloud computing and AI. Driving innovation for a smarter, sustainable future.</p>
+    </div>
+
+    <div class="team-member-card">
+      <div class="team-img-container">
+        <img src="{% static 'images/mem1.png' %} "  alt="Team Member 2" class="team-img">
+      </div>
+      <h4 class="team-name">Jane Smith</h4>
+      <p class="team-role">Senior Cloud Architect</p>
+      <p class="team-description">An expert in cloud solutions, transforming businesses by enabling scalable, secure, and high-performance infrastructure.</p>
+    </div>
+
+    <div class="team-member-card">
+      <div class="team-img-container">
+        <img src="{% static 'images/mem1.png' %} "  alt="Team Member 3" class="team-img">
+      </div>
+      <h4 class="team-name">Alice Johnson</h4>
+      <p class="team-role">Lead Data Scientist</p>
+      <p class="team-description">Passionate about data and analytics, turning raw data into actionable insights that drive business growth.</p>
+    </div>
+	
+	<div class="team-member-card">
+      <div class="team-img-container">
+        <img src="{% static 'images/mem1.png' %} "  alt="Team Member 3" class="team-img">
+      </div>
+      <h4 class="team-name">Alice Johnson</h4>
+      <p class="team-role">Lead Data Scientist</p>
+      <p class="team-description">Passionate about data and analytics, turning raw data into actionable insights that drive business growth.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="why-techsol" class="why-section">
+  <h2 class="why-title">Why Choose <span>Techsol</span><span class="qm">?</span></h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <i class="icon fas fa-check-circle"></i>
+      <h3>Proven Global Delivery</h3>
+      <p>Backed by years of successful projects across industries and continents.</p>
+    </div>
+    <div class="why-card">
+      <i class="icon fas fa-cogs"></i>
+      <h3>Agile & Scalable</h3>
+      <p>Flexible frameworks that adapt to your growth and goals seamlessly.</p>
+    </div>
+    <div class="why-card">
+      <i class="icon fas fa-rocket"></i>
+      <h3>Future-Proof Tech</h3>
+      <p>Cutting-edge tools & innovations built to stand the test of time.</p>
+    </div>
+    <div class="why-card">
+      <i class="icon fas fa-users"></i>
+      <h3>Passionate Team</h3>
+      <p>Driven minds who turn ideas into impactful digital experiences.</p>
+    </div>
+    <div class="why-card">
+      <i class="icon fas fa-users"></i>
+      <h3>Client-First Culture</h3>
+      <p>Your success is our mission — we listen, align, and deliver with your vision at the heart of it all.</p>
+    </div>
+    <div class="why-card">
+      <i class="icon fas fa-users"></i>
+      <h3>End-to-End Expertise</h3>
+      <p>From strategy to support, we handle it all — so you can focus on what matters most. </p>
+    </div>
+  </div>
+</section>
+
+  <section class="cta-section" id="cta">
+  <div class="cta-content">
+    <h3>Ready to <span>Build the Future?</span></h3>
+    <p>Let’s create <strong>transformative digital experiences</strong> together. <br>Techsol Global is ready to partner with you.</p>
+    <a href="{% url 'contact:contact' %}" class="cta-button">Let’s Collaborate </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    <!-- Part 2: Quick Links -->
+    <div class="footer-part footer-quick-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="nav-links">
+        <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+        <li><a href="{% url 'services:services' %}">Services</a></li>
+      <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+        <li><a href="{% url 'careers:career' %}">Careers</a></li>
+        <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+        
+      </ul>
+    </div>
+
+
+    <!-- Part 3: Our Services -->
+    <div class="footer-part footer-services">
+      <h3 class="footer-heading">Our Services</h3>
+      <ul class="services-links">
+        <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+      </ul>
+    </div>
+
+   <!-- Part 4: Reserved for later -->
+     <div class="cta-section">
+    <p class="cta-text">
+      Let’s get started on something great.<br>
+      Our team of IT experts looks forward to meeting with you<br>
+      and providing valuable insights tailored to your business.
+    </p>
+    <a href="{% url 'contact:contact' %}" class="cta-button">Get an appointment now</a>
+
+  </div>
+</div>
+
+  </div>
+</footer>
+
+<footer class="footer">
+  <div class="footer-location-row">
+    <div class="footer-title">Our Location</div>
+    <div class="location-scroll">
+      <div class="location-item" 
+           onmouseover="showLocationDetails('india-info')" 
+           onmouseout="hideLocationDetails('india-info')" 
+           onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+        <img src="https://flagcdn.com/in.svg" alt="India" />
+        <span>India</span>
+        <div class="location-info" id="india-info">
+          <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('usa-info')" 
+           onmouseout="hideLocationDetails('usa-info')" 
+           onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+        <img src="https://flagcdn.com/us.svg" alt="USA" />
+        <span>USA</span>
+        <div class="location-info" id="usa-info">
+          <p>250 Vesey St, New York, NY 10281</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('uk-info')" 
+           onmouseout="hideLocationDetails('uk-info')" 
+           onclick="openPopup('UK', 'Techsol UK, London, UK')">
+        <img src="https://flagcdn.com/gb.svg" alt="UK" />
+        <span>UK</span>
+        <div class="location-info" id="uk-info">
+          <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('australia-info')" 
+           onmouseout="hideLocationDetails('australia-info')" 
+           onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+        <img src="https://flagcdn.com/au.svg" alt="Australia" />
+        <span>Australia</span>
+        <div class="location-info" id="australia-info">
+          <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-card">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popup-title">Location Title</h3>
+      <p id="popup-address">Address details will appear here.</p>
+    </div>
+  </div>
+</footer>
+
+
+<br><br><br><br><br>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <img src="{% static 'images/logo.png' %}"  alt="Techsol Logo" class="footer-logo-small" />
+    <p>© 2025 Techsol Global Limited. All rights reserved.</p>	
+  </div>
+</footer>
+<br>
+</section>
+</footer>
+  <script src="{% static 'js/style.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

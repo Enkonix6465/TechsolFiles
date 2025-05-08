@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techsol| Cloud</title>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      </div>
+      <nav class="nav-center">
+    <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+      </ul>
+    </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+  
+  </nav>
+    </div>
+  </header>
+
+
+<main class="cloud-container">
+  <section class="intro-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">   
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+      <source src="{% static 'images/datavd.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Text Overlay -->
+    <!-- Text Overlay -->
+  <div style="position: relative; z-index: 1; padding: 50px 20px;">
+    <h2 style="font-size: 4.5rem; background:gold; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      Smarter Business Starts With Data
+    </h2><br>
+    <br>
+    <p style="color:white; font-size: 2.1rem;">
+      At Techsol Global, we turn data into clarity. Our analytics solutions help enterprises gain real-time insights, optimize decisions, and unlock next-gen growth strategies — powered by clean, connected, and intelligent data.</p>
+    </p>
+  </div>
+  </section>
+
+<section class="cloud-journey">
+  <h2>Your Data Analytics Transformation Journey</h2>
+  <p>From raw data to real-time insights — here's how Techsol Global helps you unlock data-driven growth at every stage.</p>
+  <div class="journey-steps">
+
+    <!-- Step 1: Data Discovery & Assessment -->
+    <div class="step">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <h3>Data Discovery & Assessment</h3>
+      <p>We audit your existing data sources, identify gaps, and build a roadmap tailored to your business goals.</p>
+    </div>
+
+    <!-- Step 2: Data Integration & Cleansing -->
+    <div class="step">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 4a2 2 0 0 1 2-2h2v6H5a2 2 0 0 1-2-2zM9 2h6v6H9zM15 2h2a2 2 0 0 1 2 2v2h-4zM21 9v6h-6V9zM15 15h4v2a2 2 0 0 1-2 2h-2v-4zM9 15v6H7a2 2 0 0 1-2-2v-2h4zM9 9v6H3V9zM15 21h-6v-6h6z" />
+      </svg>
+      <h3>Data Integration & Cleansing</h3>
+      <p>Connect all your systems, clean up inconsistent data, and ensure a single source of truth across your organization.</p>
+    </div>
+
+    <!-- Step 3: Analytics & Visualization -->
+    <div class="step">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19h16" />
+        <rect x="4" y="13" width="4" height="6" />
+        <rect x="10" y="9" width="4" height="10" />
+        <rect x="16" y="5" width="4" height="14" />
+      </svg>
+      <h3>Analytics & Visualization</h3>
+      <p>Turn complex data into clear, interactive dashboards and reports that guide smart decision-making.</p>
+    </div>
+
+    <!-- Step 4: Advanced Insights & Predictive Modeling -->
+    <div class="step">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+        <path d="M12 12V4" />
+        <path d="M12 4l4 4m-4-4L8 8" />
+      </svg>
+      <h3>Advanced Insights & Predictive Modeling</h3>
+      <p>Use AI/ML to uncover trends, forecast outcomes, and give your business a competitive edge in real-time.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="service-cards">
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/business-intelligence.jpg'%}" alt="Business Intelligence" class="card-img" />
+      <div class="overlay-text">Business Intelligence</div>
+    </div>
+    <div class="card-content">
+      
+      <p class="highlight-description">Visual dashboards and KPI tracking that empower smarter, faster decisions.</p>
+      <ul class="highlight-list">
+        <li>Real-time data dashboards</li>
+        <li>Custom KPI monitoring</li>
+        <li>Self-service reporting tools</li>
+        <br><br><br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Business Intelligence (BI)</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/data-engineering.jpg' %}" alt="Data Engineering" class="card-img" />
+      <div class="overlay-text">Data Engineering</div>
+    </div>
+    <div class="card-content">
+      
+      <p class="highlight-description">Clean, structure, and pipeline your data to unlock its full potential.</p>
+      <ul class="highlight-list">
+        <li>ETL/ELT pipeline creation</li>
+        <li>Data warehousing solutions</li>
+        <li>Data quality management</li>
+        <br><br><br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Data Engineering</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/advanced-analytics.jpg' %}" alt="Advanced Analytics" class="card-img" />
+      <div class="overlay-text">Advanced Analytics</div>
+    </div>
+    <div class="card-content">
+     
+      <p class="highlight-description">Predictive modeling, machine learning, and AI that drive smarter business outcomes.</p>
+      <ul class="highlight-list">
+        <li>Forecasting models</li>
+        <li>Machine learning integration</li>
+        <li>Actionable trend analysis</li>
+        <br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Advanced Analytics</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/data-governance.jpg ' %}" alt="Data Governance" class="card-img" />
+      <div class="overlay-text">Data Governance</div>
+    </div>
+    <div class="card-content">
+  
+      <p class="highlight-description">Secure, compliant, and consistent data frameworks that build trust and reliability.</p>
+      <ul class="highlight-list">
+        <li>Data privacy compliance (GDPR, HIPAA)</li>
+        <li>Role-based access control</li>
+        <li>Metadata and cataloging</li>
+        
+        <br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Data Governance</div>
+  </div>
+</section>
+
+  </main>
+
+ 
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    
+
+
+
+   <!-- Part 2: Quick Links -->
+   <div class="footer-part footer-quick-links">
+    <h3 class="footer-heading">Quick Links</h3>
+    <ul class="nav-links">
+      <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+      <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+      <li><a href="{% url 'services:services' %}">Services</a></li>
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+      <li><a href="{% url 'careers:career' %}">Careers</a></li>
+      <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+    </ul>
+  </div>
+
+
+    <!-- Part 3: Our Services -->
+    <div class="footer-part footer-services">
+      <h3 class="footer-heading">Our Services</h3>
+      <ul class="services-links">
+        <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+      </ul>
+    </div>
+
+
+   
+   <!-- Part 4: Reserved for later -->
+   <div class="cta-section">
+    <p class="cta-text">
+      Let’s get started on something great.<br>
+      Our team of IT experts looks forward to meeting with you<br>
+      📞 9108191003<br>
+      ✉️ info@Techsol.com
+    </p>
+    <a href="contact.html" class="cta-button">Get an appointment now</a>
+  </div>
+</div>
+
+  </div>
+</footer>
+
+
+
+<footer class="footer">
+    <div class="footer-location-row">
+      <div class="footer-title">Our Location</div>
+      <div class="location-scroll">
+        <div class="location-item" 
+             onmouseover="showLocationDetails('india-info')" 
+             onmouseout="hideLocationDetails('india-info')" 
+             onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+          <img src="https://flagcdn.com/in.svg" alt="India" />
+          <span>India</span>
+          <div class="location-info" id="india-info">
+            <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('usa-info')" 
+             onmouseout="hideLocationDetails('usa-info')" 
+             onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+          <img src="https://flagcdn.com/us.svg" alt="USA" />
+          <span>USA</span>
+          <div class="location-info" id="usa-info">
+            <p>250 Vesey St, New York, NY 10281</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('uk-info')" 
+             onmouseout="hideLocationDetails('uk-info')" 
+             onclick="openPopup('UK', 'Techsol UK, London, UK')">
+          <img src="https://flagcdn.com/gb.svg" alt="UK" />
+          <span>UK</span>
+          <div class="location-info" id="uk-info">
+            <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('australia-info')" 
+             onmouseout="hideLocationDetails('australia-info')" 
+             onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+          <img src="https://flagcdn.com/au.svg" alt="Australia" />
+          <span>Australia</span>
+          <div class="location-info" id="australia-info">
+            <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-card">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3 id="popup-title">Location Title</h3>
+        <p id="popup-address">Address details will appear here.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  
+  <br><br><br><br><br><br> 
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+    <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+	
+
+ </div>
+</footer>
+
+<br>
+<script src="{% static 'js/servicejs.js' %}"></script>
+<script src="{% static 'js/style.js' %}"></script>
+<script src="{% static 'js/servicesjs.js' %}"></script>
+
+</body>
+</html>

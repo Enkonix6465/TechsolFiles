@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techsol| Cloud</title>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      </div>
+      <nav class="nav-center">
+    <!-- HTML -->
+  <ul class="nav-links relative">
+    <li><a href="{% url 'index:index' %}">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  
+    <!-- Dropdown wrapper -->
+    <li class="dropdown">
+      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+      </ul>
+    </li>
+  
+   
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
+  </ul>
+  
+  </nav>
+    </div>
+  </header>
+
+
+<main class="cloud-container">
+  <section class="intro-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">   
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+      <source src="{% static 'images/networkvd.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Text Overlay -->
+    <!-- Text Overlay -->
+  <div style="position: relative; z-index: 1; padding: 50px 20px;">
+    <h2 style="font-size: 4.5rem; background:gold; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      Seamless Connectivity for a Smarter Tomorrow
+    </h2><br>
+    <br>
+    <p style="color:white; font-size: 2.1rem;">
+      At Techsol Global, we engineer intelligent network solutions that keep your business connected, secure, and future-ready. From on-prem to hybrid to multi-cloud environments — we ensure smooth, scalable, and high-performance connectivity every step of the way.
+       </p>
+  </div>
+  </section>
+
+  <section class="cloud-journey">
+    <h2>Your Intelligent Network Evolution</h2>
+    <p>From blueprint to bandwidth — here’s how we future-proof your network infrastructure.</p>
+    <div class="journey-steps">
+  
+      <!-- Step 1: Network Assessment & Design -->
+      <div class="step">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="3 11 12 2 21 11 12 20 3 11" />
+          <line x1="12" y1="2" x2="12" y2="20" />
+        </svg>
+        <h3>Network Assessment & Design</h3>
+        <p>Evaluate current infrastructure, identify gaps, and architect a tailored, scalable network strategy.</p>
+      </div>
+  
+      <!-- Step 2: Implementation & Integration -->
+      <div class="step">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20v-6" />
+          <path d="M18 14v6" />
+          <path d="M6 14v6" />
+          <path d="M12 4a4 4 0 0 1 4 4v4H8V8a4 4 0 0 1 4-4z" />
+        </svg>
+        <h3>Implementation & Integration</h3>
+        <p>Deploy robust network solutions with minimal disruption, fully integrated across systems and cloud platforms.</p>
+      </div>
+  
+      <!-- Step 3: Performance Optimization -->
+      <div class="step">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6" />
+          <polyline points="3 12 10 12 21 12" />
+          <polyline points="3 18 14 18 21 18" />
+        </svg>
+        <h3>Performance Optimization</h3>
+        <p>Maximize uptime, bandwidth, and responsiveness with smart routing, load balancing, and traffic management.</p>
+      </div>
+  
+      <!-- Step 4: Monitoring & Security Management -->
+      <div class="step">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 12v.01" />
+          <path d="M2 12c0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2 2 6.48 2 12z" />
+          <path d="M12 6a6 6 0 0 1 6 6" />
+        </svg>
+        <h3>Monitoring & Security Management</h3>
+        <p>Proactively monitor threats, enforce security policies, and ensure compliance across all network layers.</p>
+      </div>
+  
+    </div>
+  </section>
+  <section class="service-cards">
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/enterprise-network.jpg' %}" alt="Enterprise Network Setup" class="card-img" />
+      <div class="overlay-text">Enterprise Network Setup</div>
+    </div>
+    <div class="card-content">
+      
+      <p class="highlight-description">Customized LAN/WAN solutions built to scale with your business goals.</p>
+      <ul class="highlight-list">
+        <li>High-performance infrastructure</li>
+        <li>Tailored for scalability and growth</li>
+        <li>Optimized for speed and security</li>
+        <br><br><br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Enterprise Network Setup</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/cybersecurity.jpg' %}" alt="Cybersecurity & Firewalls" class="card-img" />
+      <div class="overlay-text">Cybersecurity & Firewalls</div>
+    </div>
+    <div class="card-content">
+    
+      <p class="highlight-description">Advanced defense mechanisms against cyber threats, breaches, and vulnerabilities.</p>
+      <ul class="highlight-list">
+        <li>Next-gen firewalls</li>
+        <li>Threat detection & response</li>
+        <li>Data loss prevention (DLP)</li>
+        <br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Cybersecurity & Firewalls</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/sd-wan.jpg' %}" alt="SD-WAN Integration" class="card-img" />
+      <div class="overlay-text">SD-WAN Integration</div>
+    </div>
+    <div class="card-content">
+     
+      <p class="highlight-description">Empowering branch connectivity with faster, smarter, and more flexible networking.</p>
+      <ul class="highlight-list">
+        <li>Multi-branch connectivity</li>
+        <li>Centralized control & visibility</li>
+        <li>Optimized traffic routing</li>
+        <br><br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">SD-WAN Integration</div>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-image">
+      <img src="{% static 'images/network-monitoring.jpg' %}" alt="Network Monitoring" class="card-img" />
+      <div class="overlay-text">Network Monitoring</div>
+    </div>
+    <div class="card-content">
+     
+      <p class="highlight-description">Real-time insights, alerts, and support to keep your network running 24/7.</p>
+      <ul class="highlight-list">
+        <li>Proactive incident detection</li>
+        <li>Live performance dashboards</li>
+        <li>Reduced downtime & faster resolutions</li>
+        <br><br><br><br><br><br>
+      </ul>
+    </div>
+    <div class="card-label"style="color: gold; -webkit-text-stroke: 0px black">Network Monitoring</div>
+  </div>
+</section>
+
+  </main>
+
+ 
+
+<footer class="footer-section">
+  <div class="footer-container">
+
+    
+
+
+
+   <!-- Part 2: Quick Links -->
+   <div class="footer-part footer-quick-links">
+    <h3 class="footer-heading">Quick Links</h3>
+    <ul class="nav-links">
+      <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
+      <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+      <li><a href="{% url 'services:services' %}">Services</a></li>
+    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+      <li><a href="{% url 'careers:career' %}">Careers</a></li>
+      <li><a href="{% url 'contact:contact' %}">Contant Us</a></li>
+    </ul>
+  </div>
+
+
+    <!-- Part 3: Our Services -->
+    <div class="footer-part footer-services">
+      <h3 class="footer-heading">Our Services</h3>
+      <ul class="services-links">
+        <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+        <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+        <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+        <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+        <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+      </ul>
+    </div>
+
+
+   
+   <!-- Part 4: Reserved for later -->
+   <div class="cta-section">
+    <p class="cta-text">
+      Let’s get started on something great.<br>
+      Our team of IT experts looks forward to meeting with you<br>
+      📞 9108191003<br>
+      ✉️ info@Techsol.com
+    </p>
+    <a href="contact.html" class="cta-button">Get an appointment now</a>
+  </div>
+</div>
+
+  </div>
+</footer>
+
+
+
+<footer class="footer">
+    <div class="footer-location-row">
+      <div class="footer-title">Our Location</div>
+      <div class="location-scroll">
+        <div class="location-item" 
+             onmouseover="showLocationDetails('india-info')" 
+             onmouseout="hideLocationDetails('india-info')" 
+             onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+          <img src="https://flagcdn.com/in.svg" alt="India" />
+          <span>India</span>
+          <div class="location-info" id="india-info">
+            <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('usa-info')" 
+             onmouseout="hideLocationDetails('usa-info')" 
+             onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+          <img src="https://flagcdn.com/us.svg" alt="USA" />
+          <span>USA</span>
+          <div class="location-info" id="usa-info">
+            <p>250 Vesey St, New York, NY 10281</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('uk-info')" 
+             onmouseout="hideLocationDetails('uk-info')" 
+             onclick="openPopup('UK', 'Techsol UK, London, UK')">
+          <img src="https://flagcdn.com/gb.svg" alt="UK" />
+          <span>UK</span>
+          <div class="location-info" id="uk-info">
+            <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+          </div>
+        </div>
+
+        <div class="location-item" 
+             onmouseover="showLocationDetails('australia-info')" 
+             onmouseout="hideLocationDetails('australia-info')" 
+             onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+          <img src="https://flagcdn.com/au.svg" alt="Australia" />
+          <span>Australia</span>
+          <div class="location-info" id="australia-info">
+            <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-card">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3 id="popup-title">Location Title</h3>
+        <p id="popup-address">Address details will appear here.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  
+  <br><br> <br><br><br><br><br>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <img src="{% static 'images/logo.png' %}" alt="Techsol Logo" class="footer-logo-small" />
+    <p>© 2025 Techsol Global Limited. All rights reserved.</p>
+	
+
+ </div>
+</footer>
+
+<br>
+<script src="{% static 'js/servicejs.js' %}"></script>
+<script src="{% static 'js/style.js' %}"></script>
+<script src="{% static 'js/servicesjs.js' %}"></script>
+
+</body>
+</html>

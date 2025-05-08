@@ -1,0 +1,440 @@
+/* Careers Themed CSS - Matches index.css design */
+body {
+  background-color: black;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #1a1a1a;
+  color: #00f7ff;
+  text-shadow: 0 0 8px rgba(0, 247, 255, 0.4);
+  animation: fadeSlideUp 1s ease-in-out both;
+}
+
+.hero p {
+  color: #bbbbbb;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center; 
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #facc15;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #00f7ff;
+  display: inline-block;
+  animation: fadeSlideUp 1.2s ease-in-out both;
+}
+
+.job-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.job-card {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 247, 255, 0.3);
+}
+
+.job-card h3 {
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.job-card button {
+  margin-top: 15px;
+  background-color: #00f7ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.job-card button:hover {
+  background-color: #00cdd8;
+}
+
+/* Reasons Section */
+.why-techsol .reasons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.reason {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.reason h4 {
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.reason p {
+  color: #ccc;
+}
+
+/* CTA Section */
+.cta {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(black, #143 150%, black 100%);
+}
+
+.cta h2 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.cta a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+.cta button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  background-color: #facc15;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #ffe066;
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(black, #143 150%, black 100%);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 0 0 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: black;
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  animation: popUp 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  z-index: 1;
+  position: relative;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(-20px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.hero {
+  background:black;
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 0 0 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  animation: popUp 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+/* Call-To-Action Button */
+.hero-btn {
+  display: inline-block;
+  background-color: gold;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 1.4s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: gold;
+  transform: translateY(-3px);
+}
+
+
+.section1 {
+  padding: 4rem 2rem;
+  background: linear-gradient(black, #143 150%, black);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.section2 {
+  padding: 4rem 2rem;
+  background: linear-gradient(black, #143 150%, black);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.job-listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.job-card {
+  background: black;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.job-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.job-card p {
+  font-size: 0.95rem;
+  color: white;
+  margin: 0.4rem 0;
+}
+
+.job-card button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  color: white;
+  background: #3498db;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.job-card button:hover {
+  background: #2980b9;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Align footer content to the left */
+.footer-part.footer-quick-links, 
+.footer-part.footer-services {
+  text-align: left; /* Aligning the text to the left */
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown.show .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+

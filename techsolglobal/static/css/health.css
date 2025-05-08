@@ -1,0 +1,482 @@
+/* Main Hero Header Section */
+.hero-header {
+    background: linear-gradient(black, #143 150%, black 100%);
+    padding: 120px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 1s ease forwards;
+    transform: scale(0.95);
+  }
+  
+  /* Floating background glow elements */
+  .hero-header::before,
+  .hero-header::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #00c6ff33 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 10s infinite alternate ease-in-out;
+  }
+  
+  .hero-header::before {
+    top: -100px;
+    left: -100px;
+  }
+  
+  .hero-header::after {
+    bottom: -100px;
+    right: -100px;
+  }
+  
+  /* Content positioning */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* ✨ Gold Glow + 🖤 Black Outline for Heading */
+  .hero-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white; /* Gold */
+    
+  }
+  
+  /* Subheading text */
+  .hero-header p {
+    font-size: 1.4rem;
+    color: #dddddd;
+    opacity: 0.9;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Zoom-in animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Floating background animation */
+  @keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    100% { transform: translateY(20px) scale(1.05); }
+  }
+  
+  /* Overview Section */
+  .overview-section {
+    background: linear-gradient(black, #143 150%, black 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out;
+    margin: 30px 0;
+  }
+  
+  .overview-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700; /* Gold */
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .overview-section p {
+    font-size: 1.1rem;
+    color: #ddd;
+    opacity: 0.8;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  
+  /* Card Container */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Individual Card */
+  .card {
+    background: linear-gradient(145deg, #1f1f2e, #2c2c3c);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .card:hover .card-icon {
+    color: #ffcc00; /* Lighter Gold on hover */
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #ffd700;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #ddd;
+    opacity: 0.8;
+  }
+  
+  /* Animation for Overview section */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  /* Services Section */
+  .services-section {
+    background: linear-gradient(black, #143 150%, black 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin: 30px 0;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .services-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700; /* Gold */
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .services-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card {
+    background: #333;
+    padding: 30px;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    color: #ffd700; /* Gold */
+    margin-bottom: 20px;
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    color: #ffd700; /* Gold */
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 1.1rem;
+    color: #ddd;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card {
+    background: #333;
+    padding: 30px;
+    border-radius: 15px;
+    width: 28%;
+    min-width: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .services-section {
+    padding: 60px 20px;
+    background: linear-gradient(black, #2c2c3c, #1f1f2e);
+    color: #fff;
+    border-radius: 15px;
+    margin: 30px 0;
+  }
+  
+  .video-container {
+    width: 30cm; /* Set width to 30 cm */
+    height: 12cm; /* Set height to 16 cm */
+   
+    top: 50%; /* Move to the center vertically */
+    left: 10%; /* Move to the center horizontally */
+    border-radius: 15px;
+  }
+  
+  
+  
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above the video */
+  }
+  
+  .play-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  
+  
+  
+  .services-section {
+    padding: 60px 20px;
+   background: linear-gradient(black, #143 150%, black 100%);
+    color: #fff;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .card-container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Distributes the space evenly */
+    gap: 20px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .card {
+    background: #333;
+    padding: 30px;
+    border-radius: 15px;
+    width: 23%; /* This ensures 4 cards fit in a row (100% / 4 = 25%, but we are adding space between them) */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  
+  .bg-video {
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+  .healthcare-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .healthcare-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .healthcare-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:none;
+    z-index: 1;
+  }
+  
+  .healthcare-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  .healthcare-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+  }
+  
+  .healthcare-content p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  
+  /* Show on hover */
+  .dropdown:hover .dropdown-menu,
+  .dropdown.show .dropdown-menu {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  
+  .footer-location-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .location-item {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .location-item:hover .location-info {
+    display: block;
+  }
+  
+  
+  .location-item {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 20px; /* Added space between flags */
+  }
+  
+  .location-info {
+    display: none;
+    position: absolute;
+    top: 120%; /* appears right below the location-item */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    width: 260px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .location-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 2px;
+    position: relative; 
+    
+  }
+  
+  .footer-location-row,
+  .location-scroll {
+    position: relative;
+    overflow: visible !important;
+  }
+  
+  .location-item {
+    position: relative;
+  }
+  
+  

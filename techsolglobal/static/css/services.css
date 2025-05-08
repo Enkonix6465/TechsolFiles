@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white;
+  line-height: 1.6;
+}
+body {
+  background: black;
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.service-card p {
+  color: #fff;
+}
+
+
+/* SERVICES */
+.services-section {
+  background: rgb(5, 5, 0);
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: linear-gradient(to right, black, #143, black);
+  border-left: 5px solid gold;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-18px);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+/* NEWS */
+.news-section {
+  background: black;
+  padding: 60px 0;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #ffbf00;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.news-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+
+.news-section {
+  background: linear-gradient(black );
+  padding: 60px 0;
+  border: 2px solid gold;
+  box-shadow: 0 0 20px gold;
+  border-radius: 1rem;
+  color: white;
+}
+
+.news-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px gold;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.news-card {
+  background: rgba(255, 215, 0, 0.05);
+  border-left: 4px solid gold;
+  padding: 20px 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+}
+
+.news-card h4 {
+  font-size: 1.3rem;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 215, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.services-section {
+  
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: linear-gradient(to right, black, #143, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.service-text, .service-image {
+  flex: 1 1 48%;
+  box-sizing: border-box;
+}
+
+.service-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service-text p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.service-image {
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.service-image:hover img {
+  transform: scale(1.08);
+}
+
+.service-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+}
+
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown.show .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+
+
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+
+
+
+.footer-location-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.location-item:hover .location-info {
+  display: block;
+}
+
+
+.location-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px; /* Added space between flags */
+}
+
+.location-info {
+  display: none;
+  position: absolute;
+  top: 120%; /* appears right below the location-item */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 260px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+  white-space: normal;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.location-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  position: relative; 
+  
+}
+
+.footer-location-row,
+.location-scroll {
+  position: relative;
+  overflow: visible !important;
+}
+
+.location-item {
+  position: relative;
+}
+

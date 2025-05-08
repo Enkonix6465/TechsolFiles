@@ -1,0 +1,580 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Webpage</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+
+
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+      <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    </div>
+    <nav class="nav-center">
+  <!-- HTML -->
+<ul class="nav-links no-underline-nav">
+  <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+  <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+
+  <!-- Dropdown wrapper -->
+  <li class="dropdown">
+  <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+  <ul class="dropdown-menu">
+    <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+    <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+    <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+    <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+    <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+    <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+    <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+  </ul>
+</li>
+
+ 
+  <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+  <li><a href="{% url 'careers:career' %}" >Careers</a></li>
+   <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
+</ul>
+
+</nav>
+  </div>
+</header>
+<div class="marquee-container">
+  <div class="marquee">
+    Welcome to Techsol Global Limited — Delivering Tech Brilliance Globally | Reach us at admin@Techsol.in | Call us: +91-9108191003
+  </div>
+</div>
+<section id="home" class="home-section" style="position: relative; overflow: hidden;">
+
+  <!-- 🎥 Video Background -->
+  <video autoplay muted loop playsinline class="home-video-bg">
+    <source src="{% static 'images/background_video.mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 💬 Content Over Video -->
+  <div class="home-content">
+    <h2 class="home-title">Welcome to<br><span style="color: rgb(8, 100, 69);">Techsol Global Limited</span></h2>
+    
+    <p class="home-text">
+      <strong>Empowering innovation through cutting-edge technology and global solutions.
+We deliver excellence across industries with a commitment to quality, trust, and growth.</strong> .
+    </p>
+  </div>
+  
+</section>
+<br>
+<br>
+<section id="about" class="mission-vision-section">
+  
+  <a href="{% url 'index:mission' %}" class="mv-card-link">
+    <div class="mv-card">
+      <img src="{% static 'images/mission_logo.png' %}" alt="Mission Icon" class="mv-icon" />
+      <h2 class="mv-title">Our Mission</h2>
+      <p class="mv-text">To innovate and deliver impactful tech solutions that transform businesses and uplift communities.</p>
+	  <h2 class="underline text-white">Read More</h2>
+    </div>
+  </a>
+  
+
+  <a href="{% url 'index:vision' %}" class="mv-card-link">
+    <div class="mv-card">
+      <img src="{% static 'images/vision_logo.png' %}" alt="Vision Icon" class="mv-icon" />
+      <h2 class="mv-title">Our Vision</h2>
+      <p class="mv-text">To be a global leader in digital transformation, inspiring progress through technology.</p>
+	  <h2 class="underline text-white">Read More</h2>
+    </div>
+  </a>
+
+  <a href="{% url 'index:values' %}" class="mv-card-link">
+    <div class="mv-card">
+      <img src="{% static 'images/valores_logo.png' %}" alt="Values Icon" class="mv-icon" />
+      <h2 class="mv-title">Our Values</h2>
+      <p class="mv-text">Integrity, Innovation, Collaboration, <br>and <br>Customer-Centric Excellence.</p>
+	  <h2 class="underline text-white">Read More</h2>
+    </div>
+  </a>
+
+</section>
+
+<BR>
+<BR>
+
+<section class="carousel-wrapper">
+  <div class="carousel-container" id="carousel-container">
+
+
+  <div class="carousel-slide">
+   <a href="{% url 'services:cloud' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/1.PNG' %}" alt="Cloud Services" />
+	  
+      <h1 class="slide-heading">Cloud Services</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Empowering businesses to scale and innovate through secure, flexible, and cost-efficient cloud solutions.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+   <a href="{% url 'services:application_development' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/2.png' %}" alt="Application Development" />
+	  
+      <h1 class="slide-heading">Application Development</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Transforming ideas into powerful digital experiences with seamless application development and proactive management.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:cognitive_operations' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/3.png' %}" alt="Cognitive Operations" />
+      <h1 class="slide-heading">Cognitive Operations</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Enhancing operational efficiency and decision-making with AI-powered solutions that drive smarter business processes.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:data_analytics' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/4.png' %}" alt="Data & Analytics" />
+      <h1 class="slide-heading">Data & Analytics</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Unlocking the full potential of data by delivering actionable insights and fostering data-driven growth strategies.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:network_solutions' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/5.png' %}" alt="Network Solutions" />
+	  
+      <h1 class="slide-heading">Network Solutions</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Building resilient, high-performance network infrastructures that enable seamless connectivity and secure communication.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:it_advisory' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/6.png' %}" alt="IT Consulting" />
+	  
+      <h1 class="slide-heading">IT Consulting</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Providing expert guidance and innovative solutions to help businesses optimize technology, streamline operations, and achieve strategic goals.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:software_training' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/7.png' %}" alt="Software Training" />
+	  
+      <h1 class="slide-heading">Software Training</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Equipping teams with the knowledge and skills to excel through comprehensive software training tailored to your business needs.</p>
+	  </div>
+    </div>
+  </div>
+
+
+  <div class="carousel-slide">
+   <a href="{% url 'services:cloud' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/8.png' %}" alt="Cloud Services" />
+	  
+      <h1 class="slide-heading">Cloud Services</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Empowering businesses to scale and innovate through secure, flexible, and cost-efficient cloud solutions.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+   <a href="{% url 'services:application_development' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/9.png' %}" alt="Application Development" />
+	  
+      <h1 class="slide-heading">Application Development</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Transforming ideas into powerful digital experiences with seamless application development and proactive management.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:cognitive_operations' %}"class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/10.png' %}" alt="Cognitive Operations" />
+      <h1 class="slide-heading">Cognitive Operations</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Enhancing operational efficiency and decision-making with AI-powered solutions that drive smarter business processes.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:data_analytics' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/11.png' %}" alt="Data & Analytics" />
+      <h1 class="slide-heading">Data & Analytics</h1>
+	  <div class="text-overlay">Unlocking the full potential of data by delivering actionable insights and fostering data-driven growth strategies.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:network_solutions' %}"class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/12.png' %}" alt="Network Solutions" />
+	  
+      <h1 class="slide-heading">Network Solutions</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Building resilient, high-performance network infrastructures that enable seamless connectivity and secure communication.AI-driven automation to simplify IT operations.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:it_advisory' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/13.png' %}" alt="IT Consulting" />
+	  
+      <h1 class="slide-heading">IT Consulting</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Providing expert guidance and innovative solutions to help businesses optimize technology, streamline operations, and achieve strategic goals.</p>
+	  </div>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+  <a href="{% url 'services:software_training' %}" class="slide-link">
+    <div class="slide-container">
+      <img src="{% static 'images/14.png' %}" alt="Software Training" />
+	  
+      <h1 class="slide-heading">Software Training</h1>
+	  <div class="text-overlay">
+	  <p class="slide-text">Equipping teams with the knowledge and skills to excel through comprehensive software training tailored to your business needs.</p>
+	  </div>
+    </div>
+  </div>
+</div>
+  
+</a>
+  </div>
+ </section> 
+</section>
+<br>
+<br>
+<br>
+
+
+<!-- Trusted Partners Section with Smooth Scrolling -->
+<section class="trusted-partners-section bg-white py-12">
+  <div class="text-center mb-8">
+    <h2 class="text-3xl font-bold text-gray-800">A Trusted Software Development Partner</h2>
+    <p class="text-gray-600 text-lg mt-4">
+      Building lasting relationships with innovative companies worldwide. <br>
+      Together, we deliver solutions that shape the future.
+    </p>
+  </div>
+<br>
+  <div class="partners-marquee overflow-hidden relative">
+    <div class="marquee-track flex gap-12 animate-scroll whitespace-nowrap">
+  <!-- Partner Logos (repeated for smooth loop) -->
+  <img src="{% static 'images/bnp.png' %}" alt="Partner 1" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/avendus.png' %}" alt="Partner 2" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/hsbc.png' %}" alt="Partner 3" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/kissht.png' %}" alt="Partner 4" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/lloyds.png' %}" alt="Partner 5" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/nse.png' %}" alt="Partner 6" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/tata.png' %}" alt="Partner 7" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/visa.png' %}" alt="Partner 8" class="partner-logo h-16 object-contain inline-block" />
+  
+  <!-- Duplicate Set for Infinite Scroll Effect -->
+  <img src="{% static 'images/bnp.png' %}" alt="Partner 1" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/avendus.png' %}" alt="Partner 2" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/hsbc.png' %}" alt="Partner 3" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/kissht.png' %}" alt="Partner 4" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/lloyds.png' %}" alt="Partner 5" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/nse.png' %}" alt="Partner 6" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/tata.png' %}" alt="Partner 7" class="partner-logo h-16 object-contain inline-block" />
+  <img src="{% static 'images/visa.png' %}" alt="Partner 8" class="partner-logo h-16 object-contain inline-block" />
+</div>
+
+  </div>
+</section>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  
+  
+<section class="why-choose-us">
+  <div class="content-wrapper">
+    <h2>Why Choose <span>Techsol Global Limited?</span></h2>
+    <p>
+      At Techsol, we don’t just build tech — we build trust. Our team crafts tailored software with innovation,
+      precision, and passion. We're not just coders, we're problem-solvers with purpose. 
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3 class="counter" data-target="700">0</h3>
+        <p>Crafted with Code. Delivered with Heart.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="counter" data-target="250">0</h3>
+        <p>A Team That Turns Every Day Into a Milestone.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="counter" data-target="400">0</h3>
+        <p>Our True Success Lies in the Satisfaction of Our Clients.</p>
+      </div>
+      <div class="stat-box">
+        <h3 class="counter" data-target="3">0</h3>
+        <p>Expanding Horizons with Offices Nationwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+
+<section class="learn-best-from-alumni">
+  <div class="content-wrapper">
+    <h2>Learn the Best from the Alumni of</h2>
+    <div class="alumni-logos">
+      <img src="{% static 'images/stanford.png' %}" alt="Stanford" class="alumni-logo" />
+      <img src="{% static 'images/google.png' %}" alt="Google" class="alumni-logo" />
+      <img src="{% static 'images/iitbombay.png' %}" alt="IIT Bombay" class="alumni-logo" />
+      <img src="{% static 'images/amazon.png' %}" alt="Amazon" class="alumni-logo" />
+      <img src="{% static 'images/iitdelhi.png' %}" alt="IIT Delhi" class="alumni-logo" />
+      <img src="{% static 'images/microsoft.png' %}" alt="Microsoft" class="alumni-logo" />
+    </div>
+	<br>
+<h2> and many more...</h2>
+    <h3>Recognized By</h3>
+    <div class="recognized-logos">
+      <img src="{% static 'images/nasscom.png' %}" alt="Logo 1" class="recognized-logo" />
+      <img src="{% static 'images/govt.png' %}" alt="Logo 2" class="recognized-logo" />
+      <img src="{% static 'images/startup.png' %}" alt="Logo 3" class="recognized-logo" />
+      <img src="{% static 'images/nsdc.png' %}" alt="Logo 4" class="recognized-logo" />
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Client Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+  <h1 class="testimonials-title">What Our Clients Say</h1>
+  <p class="testimonials-subtitle">Real stories from real clients who’ve experienced transformation with us.</p>
+
+  <div class="testimonial-cards">
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Their team delivered a powerful backend system in record time. Extremely reliable and committed.”</p>
+
+      <h3 class="testimonial-author">– Karan B., Head of Tech at FinForce</h3>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Our UI went from 2000s to futuristic! Their design sense is fire. Truly understand users.”</p>
+      <h3 class="testimonial-author">– Swetha L., Product Manager, StyleFusion</h3>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Best dev team we've ever worked with. Full stack delivery + documentation = 100%.”</p>
+      <h3 class="testimonial-author">– John M., COO, DevStrive Inc.</h3>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Our conversion rates doubled after they revamped our frontend. Legit game changers.”</p>
+      <h3 class="testimonial-author">– Preethi D., Digital Head at ShopDeck</h3>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Their commitment to timelines and quality is unmatched. We’re already on the next project with them.”</p>
+      <h3 class="testimonial-author">– Anand R., Founder, QuickBank</h3>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">“The perfect balance of design, performance, and delivery. Highly recommend this team.”</p>
+      <h3 class="testimonial-author">– Riya N., Marketing Director at EchoCloud</h3>
+    </div>
+
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <!-- Part 2: Quick Links -->
+<div class="footer-part footer-quick-links">
+  <h3 class="footer-heading">Quick Links</h3>
+  <ul class="nav-links">
+    <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+    <li><a href="{% url 'services:services' %}">Services</a></li>
+	<li><a href="{% url 'industries:industries' %}">Industries</a></li>
+    <li><a href="{% url 'careers:career' %}">Careers</a></li>
+    <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+    
+  </ul>
+</div>
+
+
+    <!-- Part 3: Our Services -->
+<div class="footer-part footer-services">
+  <h3 class="footer-heading">Our Services</h3>
+  <ul class="services-links">
+    <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
+    <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
+    <li><a href="{% url 'services:cognitive_operations' %}" >Cognitive Business Operations</a></li>
+    <li><a href="{% url 'services:data_analytics' %}" >Data & Analytics</a></li>
+    <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+    <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+    <li><a href="{% url 'services:software_training' %}" >Software Training</a></li>
+  </ul>
+</div>
+
+
+   
+   <!-- Part 4: Reserved for later -->
+     <div class="cta-section">
+    <p class="cta-text">
+      Let’s get started on something great.<br>
+      Our team of IT experts looks forward to meeting with you<br>
+      and providing valuable insights tailored to your business.
+    </p>
+    <a href="{% url 'contact:contact' %}"class="cta-button">Get an appointment now</a>
+  </div>
+</div>
+</div>
+</footer>
+
+<footer class="footer">
+  <div class="footer-location-row">
+    <div class="footer-title">Our Location</div>
+    <div class="location-scroll">
+      <div class="location-item" 
+           onmouseover="showLocationDetails('india-info')" 
+           onmouseout="hideLocationDetails('india-info')" 
+           onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+        <img src="https://flagcdn.com/in.svg" alt="India" />
+        <span>India</span>
+        <div class="location-info" id="india-info">
+          <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('usa-info')" 
+           onmouseout="hideLocationDetails('usa-info')" 
+           onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+        <img src="https://flagcdn.com/us.svg" alt="USA" />
+        <span>USA</span>
+        <div class="location-info" id="usa-info">
+          <p>250 Vesey St, New York, NY 10281</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('uk-info')" 
+           onmouseout="hideLocationDetails('uk-info')" 
+           onclick="openPopup('UK', 'Techsol UK, London, UK')">
+        <img src="https://flagcdn.com/gb.svg" alt="UK" />
+        <span>UK</span>
+        <div class="location-info" id="uk-info">
+          <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+        </div>
+      </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('australia-info')" 
+           onmouseout="hideLocationDetails('australia-info')" 
+           onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
+        <img src="https://flagcdn.com/au.svg" alt="Australia" />
+        <span>Australia</span>
+        <div class="location-info" id="australia-info">
+          <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-card">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popup-title">Location Title</h3>
+      <p id="popup-address">Address details will appear here.</p>
+    </div>
+  </div>
+</footer>
+
+
+<br><br><br><br><br><br>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <img src="{% static 'images/logo.png' %}"  alt="Techsol Logo" class="footer-logo-small" />
+    <p>© 2025 Techsol Global Limited. All rights reserved.</p>	
+  </div>
+</footer>
+
+    <!-- Right: Social Icons -->
+<div class="footer-right">
+  <a href="https://www.linkedin.com/in/yasarapu-prudhviraj-553168291/" target="_blank" aria-label="LinkedIn">
+    <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
+  </a>
+  
+  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+    <img src="{% static 'images/facebook.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
+  </a>
+  <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+    <img src="{% static 'images/youtube.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
+  </a>
+  <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+    <img src="{% static 'images/twitter.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
+  </a>
+  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+    <img src="{% static 'images/instagram.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
+  </a>
+</div>
+
+  </div>
+ </section>
+</footer>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
+

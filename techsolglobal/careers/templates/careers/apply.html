@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply Now - Job Application</title>
+  <link rel="stylesheet" href="{% static 'css/apply.css' %}">
+</head>
+
+<body>
+  <form id="jobAppForm" class="form-container" method="POST">
+    {% csrf_token %}
+    <h2>🚀 Application Form</h2>
+
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder='Full Name' required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email"  placeholder='Email' required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder='Phone Number' required>
+
+    <label for="jobRole">Applying For</label>
+    <input type="text" id="jobRole" name="role" value="{{ role }}" placeholder='JobRole' readonly>
+
+    <label for="resume">Resume (Google Drive Link)</label>
+    <input type="url" id="resume" name="resume" placeholder="https://drive.google.com/your-resume-link" required>
+
+    <label for="linkedin">LinkedIn Profile</label>
+    <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourname" required>
+
+    <button type="submit" class="submit-btn">Submit Application</button>
+  </form>
+
+  <script src="{% static 'js/apply.js' %}"></script>
+</body>
+</html>
