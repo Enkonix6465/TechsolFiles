@@ -1,50 +1,76 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Techsol| Cloud</title>
-	 <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
   <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+    <link rel="stylesheet" href="{% static 'css/mobile1.css' %}" media="only screen and (max-width: 768px)">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav-center">
-    <!-- HTML -->
-  <ul class="nav-links relative">
-    <li><a href="{% url 'index:index' %}">Home</a></li>
-    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+    </header>
   
-    <!-- Dropdown wrapper -->
-    <li class="dropdown">
-      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-      <ul class="dropdown-menu">
-        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-      </ul>
-    </li>
-  
-   
-    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
-  </ul>
-  
-  </nav>
-    </div>
-  </header>
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
+
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
+
 
 <body>
   <header class="healthcare-hero">
@@ -70,7 +96,10 @@
     <main>
      <section class="overview-section">
     <h2>Overview</h2>
-    <p>Secure and scalable fintech solutions tailored for modern banking.</p>
+    <p style="font-size: 1.5rem; color: white;">
+      Secure and scalable fintech solutions tailored for modern banking.
+    </p>
+    
     <div class="card-container">
       
       <div class="card">
@@ -105,23 +134,23 @@
   </section>
   
       <section class="services-section">
-    <h2>Our Services</h2>
-    <p>Explore our tailored fintech solutions that are designed to meet the needs of modern banking and financial services.</p>
+    <h2 >Our Services</h2>
+    <p style="font-size: 1.5rem; color: white;">Explore our tailored fintech solutions that are designed for modern banking and financial services.</p>
     <div class="card-container">
       <div class="card">
         <div class="card-icon"></div>
         <h3><strong>Mobile Banking Apps</strong></h3>
-        <p>Custom mobile banking applications offering seamless and secure transactions, account management, and financial services on-the-go.</p>
+        <p>Seamless, secure mobile banking with real-time alerts and 24/7 account access.</p>
       </div>
       <div class="card">
         <div class="card-icon"></div>
         <h3><strong>Fraud Detection Systems</strong></h3>
-        <p>Advanced AI-driven systems that detect and prevent fraudulent activities in real-time, ensuring the security of financial transactions.</p>
+        <p>AI-powered fraud detection for real-time threat prevention and secure transactions.</p>
       </div>
       <div class="card">
         <div class="card-icon"></div>
-        <h3><strong>Robo-Advisory Platforms</strong></h3>
-        <p>Intelligent platforms powered by AI to provide personalized investment advice and portfolio management tailored to individual risk profiles.</p>
+        <h3><strong>AI-Advisory Platforms</strong></h3>
+        <p>AI-driven platforms offering personalized investment advice and smart portfolio management.</p>
       </div>
     </div>
   </section>
@@ -132,7 +161,7 @@
   
   <section class="services-section">
     <h2>Success Stories</h2>
-    <p>Real transformations powered by our banking technology solutions.</p>
+    <p style="font-size: 1.5rem; color: white;">Real transformations powered by our banking technology solutions.</p>
     <div class="card-container">
       <div class="card">
         <div class="card-icon"></div>
@@ -155,7 +184,7 @@
   
   <section class="services-section">
     <h2>Impact Metrics</h2>
-    <p>Our technology in action, by the numbers.</p>
+    <p style="font-size: 1.5rem; color: white;">Our technology in action, by the numbers.</p>
     <div class="card-container">
       <div class="card">
         <div class="card-icon"></div>
@@ -183,7 +212,7 @@
   
   <section class="services-section" id="global-reach-section">
     <h2>Global Reach</h2>
-    <p>Providing secure and scalable banking solutions to every corner of the world.</p>
+    <p style="font-size: 1.5rem; color: white;">Providing secure and scalable banking solutions to every corner of the world.</p>
     <div class="video-container" style="position: relative; overflow: hidden; border-radius: 15px;">
       <video id="healthcare-video" autoplay loop muted style="width: 100%; height: auto;">
         <source src="{% static 'images/banking.mp4' %}" type="video/mp4" />
@@ -208,7 +237,7 @@
   
      <!-- Part 2: Quick Links -->
      <div class="footer-part footer-quick-links">
-      <h3 class="footer-heading">Quick Links</h3>
+      <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
       <ul class="nav-links">
         <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
         <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
@@ -222,7 +251,7 @@
   
       <!-- Part 3: Our Services -->
       <div class="footer-part footer-services">
-        <h3 class="footer-heading">Our Services</h3>
+        <h3 class="footer-heading"style="color: gold;">Our Services</h3>
         <ul class="services-links">
           <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
           <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -255,7 +284,7 @@
   
   <footer class="footer">
       <div class="footer-location-row">
-        <div class="footer-title">Our Location</div>
+        <div class="footer-title">Our Locations</div>
         <div class="location-scroll">
           <div class="location-item" 
                onmouseover="showLocationDetails('india-info')" 

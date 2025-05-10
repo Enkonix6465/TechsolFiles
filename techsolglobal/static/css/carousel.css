@@ -1,0 +1,47 @@
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .carousel-slide {
+    min-width: 300px;
+    max-width: 400px;
+    scroll-snap-align: center;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .slide-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .slide-container {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1e1e1e;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  
+  .slide-text {
+    font-size: 1rem;
+    color: gold;
+    margin: 0;
+    text-align: center;
+    background: none !important; /* Just in case */
+    backdrop-filter: none !important; /* Disable blur if any */
+    padding: 0; /* Remove padding if there was glass-card look */
+    box-shadow: none; /* No shadow background */
+  }
+  

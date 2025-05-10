@@ -1,50 +1,76 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Techsol| Cloud</title>
-	 <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"  />
    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
   <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+    <link rel="stylesheet" href="{% static 'css/mobile1.css' %}" media="only screen and (max-width: 768px)">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav-center">
-    <!-- HTML -->
-  <ul class="nav-links relative">
-    <li><a href="{% url 'index:index' %}">Home</a></li>
-    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+    </header>
   
-    <!-- Dropdown wrapper -->
-    <li class="dropdown">
-      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-      <ul class="dropdown-menu">
-        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-      </ul>
-    </li>
-  
-   
-    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
-  </ul>
-  
-  </nav>
-    </div>
-  </header>
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
+
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
+
 
 <body>
   <header class="healthcare-hero">
@@ -68,20 +94,20 @@
   <main>
     <section class="overview-section">
    <h2>Overview</h2>
-   <p>Transforming healthcare through innovative, tech-driven solutions for enhanced patient care and streamlined medical operations.</p>
+   <p style="font-size: 1.5rem; color: white;">Transforming healthcare through innovative, tech-driven solutions for enhanced patient care and streamlined medical operations.</p>
    <div class="card-container">
      <div class="card">
        <div class="card-icon"></div>
        <img src="{% static 'images/icons/healthpage/Telemedicine.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
        <h3><strong>Telemedicine:</strong></h3>
-       <p>Enable virtual consultations, providing patients with healthcare access anytime, anywhere, bridging the gap between doctors and patients.</p>
+       <p>Virtual consultations for anytime, anywhere healthcare—bridging patients and doctors.</p>
      </div>
      
      <div class="card">
        <div class="card-icon"></div>
        <img src="{% static 'images/icons/healthpage/Remote Monitoring.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
        <h3><strong>Remote Monitoring:</strong></h3>
-       <p>Continuously monitor patients’ health status in real-time with IoT-enabled devices, ensuring proactive care and timely interventions.</p>
+       <p>Real-time patient monitoring with IoT devices for proactive care and timely interventions.</p>
      </div>
      <div class="card">
        <div class="card-icon"></div>
@@ -93,7 +119,7 @@
        <div class="card-icon"></div>
        <img src="{% static 'images/icons/healthpage/Personalized Treatment Plans.png' %}" alt="Healthcare Icon" width="70" height="70" style="margin-right: 10px;">
        <h3><strong>Personalized Treatment Plans:</strong></h3>
-       <p>Develop tailored healthcare solutions based on individual patient data, history, and preferences to provide the most effective care.</p>
+       <p>Tailored treatment plans based on patient data, history, and preferences for effective care.</p>
      </div>
    </div>
  </section>
@@ -101,22 +127,22 @@
  
  <section class="services-section">
   <h2>Our Services</h2>
-  <p>Explore our comprehensive range of services designed to enhance healthcare efficiency and patient care.</p>
+  <p style="font-size: 1.5rem; color: white;">Explore our comprehensive range of services designed to enhance healthcare efficiency and patient care.</p>
   <div class="card-container">
     <div class="card">
       <div class="card-icon"></div>
-      <h3><strong>Electronic Health Records (EHR)</strong></h3>
-      <p>Streamlined, secure, and accessible digital records that provide comprehensive patient history, enhancing healthcare delivery and decision-making.</p>
+      <h3><strong>Electronic Health Records</strong></h3>
+      <p>Secure digital health records for easy access, better care, and informed decisions.</p>
     </div>
     <div class="card">
       <div class="card-icon"></div>
       <h3><strong>Telemedicine Integration</strong></h3>
-      <p>Seamlessly connect patients and healthcare providers through secure video consultations, improving accessibility and convenience for all users.</p>
+      <p>Secure telemedicine for easy, accessible video consultations between patients and doctors.</p>
     </div>
     <div class="card">
       <div class="card-icon"></div>
       <h3><strong>AI Diagnosis Tools</strong></h3>
-      <p>Advanced artificial intelligence-powered diagnostic tools that assist healthcare professionals in making accurate, timely, and informed medical decisions.</p>
+      <p>AI-powered tools for fast, accurate, and informed medical diagnostics.</p>
     </div>
   </div>
 </section>
@@ -125,7 +151,7 @@
  
 <section class="services-section">
   <h2>Success Stories</h2>
-  <p>Real transformations powered by our technology.</p>
+  <p style="font-size: 1.5rem; color: white;">Real transformations powered by our technology.</p>
   <div class="card-container">
     <div class="card">
       <div class="card-icon"></div>
@@ -147,7 +173,7 @@
  
 <section class="services-section">
   <h2>Impact Metrics</h2>
-  <p>Our technology in action, by the numbers.</p>
+  <p style="font-size: 1.5rem; color: white;">Our technology in action, by the numbers.</p>
   <div class="card-container">
     <div class="card">
       <div class="card-icon"></div>
@@ -174,7 +200,7 @@
 
 <section class="services-section" id="global-reach-section">
   <h2>Global Reach</h2>
-  <p>Bringing better healthcare to every corner of the world.</p>
+  <p style="font-size: 1.5rem; color: white;">Bringing better healthcare to every corner of the world.</p>
   <div class="video-container" style="position: relative; overflow: hidden; border-radius: 15px;">
     <video id="healthcare-video" autoplay loop muted style="width: 100%; height: auto;">
       <source src="{% static 'images/healthcare.mp4' %}" type="video/mp4" />
@@ -198,7 +224,7 @@
 
    <!-- Part 2: Quick Links -->
    <div class="footer-part footer-quick-links">
-    <h3 class="footer-heading">Quick Links</h3>
+    <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
     <ul class="nav-links">
       <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
       <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
@@ -212,7 +238,7 @@
 
     <!-- Part 3: Our Services -->
     <div class="footer-part footer-services">
-      <h3 class="footer-heading">Our Services</h3>
+      <h3 class="footer-heading"style="color: gold;">Our Services</h3>
       <ul class="services-links">
         <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
         <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -245,7 +271,7 @@
 
 <footer class="footer">
     <div class="footer-location-row">
-      <div class="footer-title">Our Location</div>
+      <div class="footer-title">Our Locations</div>
       <div class="location-scroll">
         <div class="location-item" 
              onmouseover="showLocationDetails('india-info')" 

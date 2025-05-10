@@ -1,0 +1,490 @@
+/* General mobile reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif; /* Ensure a consistent font */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make containers full width */
+.container, .wrapper {
+    width: 100% !important; /* Ensure containers take up full width */
+    padding: 0 10px;  /* Add padding left and right */
+    box-sizing: border-box; /* Prevent overflow */
+    max-width: 100%;  /* Prevent any overflow */
+}
+
+/* Stack nav items vertically, but with spacing */
+.navbar {
+    display: flex;
+    flex-direction: column !important; /* Stack vertically on mobile */
+    align-items: stretch; /* Align items to take full width */
+    gap: 15px; /* Add spacing between nav items */
+}
+
+/* Make images and videos scale properly */
+img, video {
+    max-width: 100%; /* Ensure images and videos scale with screen */
+    height: auto;
+    object-fit: contain; /* Ensure images don't stretch */
+}
+
+/* Adjust font sizes for better readability */
+h1 {
+    font-size: 24px !important; /* Heading size */
+    margin-bottom: 10px; /* Space after heading */
+}
+
+h2 {
+    font-size: 20px !important; /* Subheading size */
+    margin-bottom: 8px; /* Space after subheading */
+}
+
+p {
+    font-size: 16px !important; /* Paragraph font size */
+    margin-bottom: 15px; /* Space after paragraph */
+}
+
+/* Adjust buttons to be full width and well-sized */
+button, .btn {
+    width: 100% !important;  /* Full width buttons */
+    font-size: 16px;
+    padding: 12px; /* Sufficient padding for easy tapping */
+    margin-top: 10px; /* Space above the button */
+    margin-bottom: 15px; /* Space below the button */
+    border: none; /* Remove borders */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Slight rounded corners */
+    cursor: pointer; /* Make button clickable */
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3; /* Darken button on hover */
+}
+
+/* Ensure form elements are aligned */
+input, select, textarea {
+    width: 100%; /* Make form inputs full width */
+    padding: 10px;
+    margin-bottom: 15px; /* Space below form elements */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Prevent elements from overflowing on small screens */
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile-specific layout fixes */
+
+/* Adjust navbar and links */
+.navbar {
+    display: flex;
+    flex-direction: column !important;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* Ensure all items inside containers fit */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px; /* Space between items */
+    width: 100%;
+}
+
+.col {
+    flex: 1 1 100%; /* Ensure columns take full width */
+    box-sizing: border-box;
+}
+
+/* Prevent any text overflow issues */
+h1, h2, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Ensure form inputs, buttons, etc., fit well */
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove unnecessary padding or margins on body */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Fix for horizontal scrolling */
+html {
+    overflow-x: hidden;
+}
+
+/* Cards - Make sure they fit properly on smaller screens */
+.card {
+    width: 100%; /* Make cards take full width on mobile */
+    margin-bottom: 15px; /* Add space between cards */
+    box-sizing: border-box;
+    padding: 15px; /* Padding inside cards */
+    border: 1px solid #ddd; /* Optional card border */
+    border-radius: 8px; /* Rounded corners */
+    background-color:gray; /* White background */
+}
+
+/* Hamburger menu icon */
+.hamburger-menu {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 760px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .navbar {
+        display: none; /* Hide mobile navbar by default */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar.active {
+        display: flex; /* Show mobile navbar when active */
+    }
+
+    .navbar a {
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/* Show the desktop navbar only for larger screens */
+@media (min-width: 761px) {
+    .navbar {
+        display: flex !important; /* Show navbar on larger screens */
+        flex-direction: row; /* Row direction for desktop */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Mobile Navbar - hidden by default */
+.navbar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 15;
+    right: -35%; /* Start off-screen */
+    width: 30%;
+    height: 50vh; /* Full height */
+    background: linear-gradient(45deg, #143, black); /* Gradient background */
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.navbar a {
+    display: block;
+    padding: 2px 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* Show the hamburger menu on mobile */
+@media (max-width: 760px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .nav-center {
+        display: none; /* Hide main navbar */
+    }
+
+    .navbar.active {
+        transform: translateX(-50%); /* Slide in from the right */
+    }
+}
+
+.mission-vision-section {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mv-card-link {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+.mv-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: glass;
+    color: white;
+    text-align: center;
+}
+
+.mv-icon {
+    width: 80px;
+    height: auto;
+    max-width: 100%;
+}
+
+.mv-title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.mv-text {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+@media (min-width: 750px) {
+    .navbar {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none;
+    }
+}
+
+  @media (min-width: 1024px) {
+    .navbar {
+      display: none;
+    }
+  }
+  .navbar {
+    display: none; /* Always start hidden */
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  /* Base hidden navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0; /* 👈 from right now */
+    width: 70%;
+    height: 100vh;
+    background: linear-gradient(45deg, #143, #000);
+    transform: translateX(100%); /* 👈 slide off-screen to the right */
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top-left-radius: 1.5rem; /* 👈 update border radius */
+    border-bottom-left-radius: 1.5rem;
+    box-shadow: -4px 0 12px rgba(15, 0, 0, 0.55); /* 👈 shadow to the left */
+  }
+  
+  /* When active, slide in */
+  .navbar.active {
+    transform: translateX(0); /* slide into view */
+  }
+  
+
+
+.footer-part {
+  padding: 20px;
+}
+
+/* Default Desktop - probably already good */
+.footer-quick-links {
+  text-align: left;
+}
+
+/* Mobile view override */
+@media screen and (max-width: 768px) {
+  .footer-quick-links {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-quick-links ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .footer-quick-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-quick-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .footer-quick-links a:hover {
+    color: #14b8a6; /* tailwind teal-400 */
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #global-reach-section .video-container {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 0 auto;
+      position: relative;
+    }
+  
+    #global-reach-section video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+  
+    #play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+  .footer-location-row {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .footer-location-row {
+    padding: 20px;
+    background-color: gray;
+    border-top: 1px solid #ddd;
+  }
+  
+  .location-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .location-item {
+    width: 22%; /* 4 items in a row on desktop */
+    background-color: gray;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .location-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  /* 👇 Stack vertically on mobile */
+  @media (max-width: 768px) {
+    .location-scroll {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .location-item {
+      width: 90%; /* Full width card on mobile */
+    }
+  }
+  

@@ -1,185 +1,225 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>techsol | Services</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/services.css' %}"/>
-  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/services.css' %}"/>
+  
  
+  </head>
 
-</head>
-<body>
-  <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
-    </div>
-    <nav class="nav-center">
-  <!-- HTML -->
-<ul class="nav-links relative">
-  <li><a href="{% url 'index:index' %}">Home</a></li>
-  <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
 
-  <!-- Dropdown wrapper -->
-  <li class="dropdown">
-    <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-    <ul class="dropdown-menu">
-      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-    </ul>
-  </li>
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
 
- 
-  <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-  <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-   <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
-</ul>
-
-</nav>
-  </div>
-</header>
 
 <section class="services-section">
   <h2 class="section-title">Our Services</h2>
-  <p class="section-subtitle">We deliver world-class tech solutions that go beyond just functionality — we innovate, optimize, and future-proof your business. Whether it's cloud integration, intelligent automation, custom applications, or real-time data insights, we craft scalable solutions that accelerate growth, drive digital transformation, and keep you ahead in a rapidly evolving digital world.</p>
-
+  <p class="section-subtitle">
+    At <strong >Techsol Global</strong>, we don’t just build tech — we 
+    <strong >engineer smart, scalable solutions</strong> that evolve with your business. From 
+    <strong>cloud integration</strong> and 
+    <strong >AI-powered automation</strong> to 
+    <strong >custom enterprise apps</strong> and 
+    <strong >real-time analytics</strong>, our services are designed to 
+    <strong>streamline operations</strong>, 
+    <strong>boost performance</strong>, and 
+    <strong>fuel digital transformation</strong>.
+    <br><br>
+   
+  </p>
+  
   <!-- Service Card 1 -->
-  <a href="{% url 'services:cloud' %}" style="text-decoration: none; color: inherit;">
-    <div class="service-card">
-      <div class="service-image">
-        <img src="{% static 'images/cloud.jpg' %}" alt="Cloud Service">
+ <!-- Service Card 1 -->
+<a href="{% url 'services:cloud' %}" style="text-decoration: none; color: inherit;">
+  <div class="service-card">
+    <div class="service-image">
+      <img src="{% static 'images/cloud.jpg' %}" alt="Cloud Service">
     </div>
     <div class="service-text">
-      <h3>Cloud</h3>
-      <p>
- 1- Seamless migration from legacy systems with zero downtime.<br>
- 2- End-to-end data protection with high availability and disaster recovery.<br>
- 3- Expertise across AWS, Azure, and hybrid cloud environments.<br>
- 4- Real-time monitoring, performance optimization, and auto-scaling features.<br>
- 5- Cost-efficient architecture tailored to your business size and scale.<br>
- 6- Custom strategies that drive innovation, agility, and long-term success.
-</p>
-
-
+      <h3 style="color:gold;margin-left: 15px;">Cloud</h3>
+      <p style="margin-left: 15px;">
+        <strong style="color:white;">Migration</strong> | <span style="color:white; font-weight: bold;">Zero downtime</span><br>
+        <strong style="color:white;">Data protection</strong> | <span style="color:white; font-weight: bold;">High availability</span><br>
+        <strong style="color:white;">AWS</strong> | <span style="color:white; font-weight: bold;">Azure</span><br>
+        <span style="color:white; font-weight: bold;">Real-time monitoring</span> | <span style="color:white; font-weight: bold;">Auto-scaling</span><br>
+        <span style="color:white; font-weight: bold;">Cost-optimized</span><br>
+      </p>
+      
+      
     </div>
   </div>
+</a>
 
   <!-- Service Card 2 -->
+<a href="{% url 'services:application_development' %}" style="text-decoration: none; color: inherit;">  
   <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/App Development.jpg' %}" alt="App Development">
     </div>
     <div class="service-text">
-      <h3> App Development</h3>
-     <p>
-1- Custom-built applications tailored to your business needs.<br>
-2- High-performance architecture optimized for speed and scalability.<br>
-3- Cross-platform development for web, iOS, and Android.<br>
-4- Intuitive UI/UX designs that enhance user engagement.<br>
-5- Thorough testing to ensure bug-free, secure deployment.<br>
-6- Ongoing maintenance, updates, and post-launch support.<br>
-7- From idea to execution — we handle the entire app lifecycle.
-</p>
+      <h3 style="color:gold;margin-left: 15px;">App Development</h3>
+      <p style="margin-left: 15px;">
+        <span style="color:white; font-weight: bold;">Custom-built applications</span> | <span style="color:white; font-weight: bold;">Business needs</span><br>
+        <span style="color:white; font-weight: bold;">Speed</span> | <span style="color:white; font-weight: bold;">Scalability</span><br>
+        <span style="color:white; font-weight: bold;">Web</span> | <span style="color:white; font-weight: bold;">iOS</span><br>
+        <span style="color:white; font-weight: bold;">UI/UX designs</span><br>
+      </p>
+      
+
+
     </div>
   </div>
-
+</a>>
   <!-- Service Card 3 -->
+<a href="{% url 'services:cognitive_operations' %}" style="text-decoration: none; color: inherit;">
   <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/Cognitive Ops.jpg' %}" alt="Cognitive Ops">
     </div>
     <div class="service-text">
-      <h3>Cognitive Ops</h3>
-      <p>
-1- Leverage AI and automation to streamline repetitive tasks.<br>
-2- Analyze large datasets for faster, smarter decision-making.<br>
-3- Automate workflows to boost efficiency and consistency.<br>
-4- Reduce operational costs through intelligent process optimization.<br>
-5- Real-time insights and alerts for proactive problem-solving.<br>
-6- Seamless integration with existing tools and systems.<br>
-7- Scalable solutions tailored for modern digital enterprises.
+      <h3 style="color:gold;margin-left: 15px;">Cognitive Ops</h3>
+      <p style="margin-left: 15px;">
+  <strong style="color:white;">AI and automation</strong> | <span style="color:white;">Streamline tasks</span><br>
+<strong style="color:white;">Data analysis</strong> | <span style="color:white;">Efficiency</span><br>
+<strong style="color:white;">Scalable solutions</strong>
+
 </p>
+
     </div>
   </div>
-<div class="service-card">
+</a>
+<!-- Service Card for Data & Analytics -->
+<a href="{% url 'services:data_analytics' %}" style="text-decoration: none; color: inherit;">
+  <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/Data & Analytics.jpg' %}" alt="Data & Analytics">
     </div>
     <div class="service-text">
-      <h3>Data & Analytics</h3>
-      <p>
-1- Collect and consolidate data from multiple sources effortlessly.<br>
-2- Uncover hidden patterns with advanced analytics and AI models.<br>
-3- Build dashboards and reports for real-time decision-making.<br>
-4- Empower teams with predictive and prescriptive insights.<br>
-5- Ensure data quality, security, and compliance at every step.<br>
-6- Seamless integration with BI tools like Power BI, Tableau, and more.<br>
-7- Drive innovation through data-driven strategies and automation.
-</p>
+      <h3 style="color:gold;margin-left: 15px;">Data & Analytics</h3>
+      <p style="margin-left: 15px;">
+        <strong style="color:white;">Data collection</strong> | <span style="color:white;">Consolidation</span><br>
+<strong style="color:white;">Advanced analytics</strong> | <span style="color:white;">AI models</span><br>
+
+      </p>
     </div>
   </div>
-<div class="service-card">
+</a>
+
+<!-- Service Card for Network Solutions -->
+<a href="{% url 'services:network_solutions' %}" style="text-decoration: none; color: inherit;">
+  <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/Network Solutions.jpg' %}" alt="Network Solutions">
     </div>
     <div class="service-text">
-      <h3> Network Solutions</h3>
-      <p>
-1- Build secure, high-speed networks tailored to your infrastructure.<br>
-2- Ensure seamless connectivity across offices, data centers, and cloud.<br>
-3- Optimize performance with intelligent routing and traffic management.<br>
-4- Implement advanced firewalls and threat protection systems.<br>
-5- Enable reliable remote access with VPN and SD-WAN solutions.<br>
-6- Monitor network health in real-time with analytics and alerts.<br>
-7- Scalable architecture to grow with your business needs.
-</p>
+      <h3 style="color:gold;margin-left: 15px;">Network Solutions</h3>
+      <p style="margin-left: 15px;">
+        <strong style="color:white;">Secure networks</strong> | <span style="color:white;">High-speed</span><br>
+<strong style="color:white;">Seamless connectivity</strong> | <span style="color:white;">Offices</span><br>
+
+      </p>
     </div>
   </div>
-<div class="service-card">
+</a>
+
+<!-- Service Card for IT Consulting -->
+<a href="{% url 'services:it_advisory' %}" style="text-decoration: none; color: inherit;">
+  <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/IT Consulting.jpg' %}" alt="IT Consulting">
     </div>
     <div class="service-text">
-      <h3>IT Consulting</h3>
-      <p>
-1- Strategic guidance to align IT with your business objectives.<br>
-2- Tailored tech roadmaps for digital transformation and innovation.<br>
-3- Improve operational efficiency with the right tools and platforms.<br>
-4- Conduct in-depth assessments and risk analysis for smarter decisions.<br>
-5- Collaborate on vendor selection, migration, and implementation.<br>
-6- Accelerate growth through future-ready IT strategies.<br>
-7- Flexible consulting models to match your pace and budget.
-</p>
+      <h3 style="color:gold;margin-left: 15px;">IT Consulting</h3>
+      <p style="margin-left: 15px;">
+        <strong style="color:white;">Strategic guidance</strong> | <span style="color:white;">Align IT</span><br>
+<strong style="color:white;">Operational efficiency</strong> | <span style="color:white;">Right tools</span><br>
+<strong style="color:white;">Risk analysis</strong> | <span style="color:white;">Smarter decisions</span><br>
+
+      </p>
     </div>
   </div>
-<div class="service-card">
+</a>
+<!-- Service Card for Software Training -->
+<a href="{% url 'services:software_training' %}" style="text-decoration: none; color: inherit;">
+  <div class="service-card">
     <div class="service-image">
       <img src="{% static 'images/Software Training.jpg' %}" alt="Software Training">
     </div>
     <div class="service-text">
-      <h3>Software Training</h3>
-      <p>
-1- Hands-on training sessions on modern tech stacks and frameworks.<br>
-2- Curated learning paths for beginners to advanced professionals.<br>
-3- Boost team productivity with real-world project-based learning.<br>
-4- Covering tools like Git, Docker, Kubernetes, React, .NET, and more.<br>
-5- Role-specific training to meet business and technical goals.<br>
-6- Track progress with assessments, certifications, and analytics.<br>
-7- Flexible training formats: live, recorded, or hybrid sessions.
-</p>
+      <h3 style="color:gold;margin-left: 15px;">Software Training</h3>
+      <p style="margin-left: 15px;">
+        <strong style="color:white;">Hands-on training</strong> | <span style="color:white;">Modern tech stacks</span><br>
+<strong style="color:white;">Boost productivity</strong> | <span style="color:white;">Project-based learning</span><br>
+<strong style="color:white;">Role-specific training</strong> | <span style="color:white;">Business goals</span><br>
+
+      </p>
     </div>
   </div>
+</a>
 
-
- 
 </section>
 
 
@@ -227,7 +267,7 @@
 
     <!-- Part 2: Quick Links -->
     <div class="footer-part footer-quick-links">
-      <h3 class="footer-heading">Quick Links</h3>
+      <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
       <ul class="nav-links">
         <li><a href="{% url 'index:index' %}"  class="hover:text-teal-400 transition">Home</a></li>
         <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
@@ -242,7 +282,7 @@
 
     <!-- Part 3: Our Services -->
     <div class="footer-part footer-services">
-      <h3 class="footer-heading">Our Services</h3>
+      <h3 class="footer-heading"style="color: gold;">Our Services</h3>
       <ul class="services-links">
         <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
         <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -269,14 +309,14 @@
   </div>
 </div>
 
-  </div>
+  
 </footer>
 
 
 
 <footer class="footer">
     <div class="footer-location-row">
-      <div class="footer-title">Our Location</div>
+      <div class="footer-title">Our Locations</div>
       <div class="location-scroll">
         <div class="location-item" 
              onmouseover="showLocationDetails('india-info')" 

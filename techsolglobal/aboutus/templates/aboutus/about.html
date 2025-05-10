@@ -1,60 +1,91 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Webpage</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/about.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-</head>
-<body>
-  <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="{% static 'images/logo.png' %} " alt="Company Logo" />
-    </div>
-    <nav class="nav-center">
-  <!-- HTML -->
-<ul class="nav-links relative">
-  <li><a href="{% url 'index:index' %}">Home</a></li>
-  <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+  </head>
 
-  <!-- Dropdown wrapper -->
-  <li class="dropdown">
-    <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-    <ul class="dropdown-menu">
-      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-    </ul>
-  </li>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
   
-   
-    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-     <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
-  </ul>
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
 
-</nav>
-  </div>
-</header>
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
+  
 
-<main class="content">
-<section class="hero">
-  <img src="{% static 'images/back.jpg' %} " alt="Hero Background" class="hero-image" />
+
+<section class="hero-content">
+  <video autoplay muted loop playsinline class="hero-image">
+    <source src="{% static 'images/aboutvideo.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
   <div class="hero-content">
-    <h1>Welcome to Techsol Global</h1>
-    <p>Empowering the digital future with innovation, trust, and agility.</p>
+    <h1 style="font-size: 7rem;color: gold;">Welcome to Techsol Global</h1>
+    <p style="font-size: 2.5rem;">Empowering the digital future with innovation, trust, and agility.</p>
   </div>
+  
 </section>
 
-
+<main class="content">
 
   <section class="section" id="who-we-are">
  <h3 style="text-align: center; color: gold;">Who We Are</h3>
@@ -65,7 +96,9 @@
     </div>
     <div class="who-we-are-text">
       <p>
-        Techsol Global is a cutting-edge technology solutions company with a passion for solving real-world problems through innovative digital solutions. We're more than just techies – we’re creators, strategists, and disruptors driven by a purpose to power up progress through technology.
+        At TechSol Global, we don’t just develop software — we engineer the future.
+Rooted in innovation and driven by purpose, our team of developers, designers, and tech strategists craft intelligent software that drives transformation and fuels digital growth.
+From concept to deployment, every line of code is designed to unlock possibilities, elevate user experience, and build a smarter, more connected world.
       </p>
     </div>
   </div>
@@ -220,32 +253,32 @@
     <div class="why-card">
       <i class="icon fas fa-check-circle"></i>
       <h3>Proven Global Delivery</h3>
-      <p>Backed by years of successful projects across industries and continents.</p>
+      <p>Years of successful projects delivered across industries and continents.</p>
     </div>
     <div class="why-card">
       <i class="icon fas fa-cogs"></i>
       <h3>Agile & Scalable</h3>
-      <p>Flexible frameworks that adapt to your growth and goals seamlessly.</p>
+      <p>Flexible frameworks that grow with your goals and adapt as you scale.</p>
     </div>
     <div class="why-card">
       <i class="icon fas fa-rocket"></i>
       <h3>Future-Proof Tech</h3>
-      <p>Cutting-edge tools & innovations built to stand the test of time.</p>
+      <p>Innovative tools and technologies built to thrive in tomorrow’s world.</p>
     </div>
     <div class="why-card">
       <i class="icon fas fa-users"></i>
       <h3>Passionate Team</h3>
-      <p>Driven minds who turn ideas into impactful digital experiences.</p>
+      <p>Creative minds turning ideas into powerful digital experiences.</p>
     </div>
     <div class="why-card">
       <i class="icon fas fa-users"></i>
       <h3>Client-First Culture</h3>
-      <p>Your success is our mission — we listen, align, and deliver with your vision at the heart of it all.</p>
+      <p>Your vision leads the way — we listen, align, and deliver with purpose.</p>
     </div>
     <div class="why-card">
       <i class="icon fas fa-users"></i>
       <h3>End-to-End Expertise</h3>
-      <p>From strategy to support, we handle it all — so you can focus on what matters most. </p>
+      <p>From strategy to support, we’ve got you covered — so you can focus on what matters most.</p>
     </div>
   </div>
 </section>
@@ -265,9 +298,9 @@
 
     <!-- Part 2: Quick Links -->
     <div class="footer-part footer-quick-links">
-      <h3 class="footer-heading">Quick Links</h3>
+      <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
       <ul class="nav-links">
-        <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
         <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
         <li><a href="{% url 'services:services' %}">Services</a></li>
       <li><a href="{% url 'industries:industries' %}">Industries</a></li>
@@ -280,7 +313,7 @@
 
     <!-- Part 3: Our Services -->
     <div class="footer-part footer-services">
-      <h3 class="footer-heading">Our Services</h3>
+      <h3 class="footer-heading"style="color: gold;">Our Services</h3>
       <ul class="services-links">
         <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
         <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -309,7 +342,7 @@
 
 <footer class="footer">
   <div class="footer-location-row">
-    <div class="footer-title">Our Location</div>
+    <div class="footer-title">Our Locations</div>
     <div class="location-scroll">
       <div class="location-item" 
            onmouseover="showLocationDetails('india-info')" 

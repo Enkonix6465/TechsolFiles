@@ -86,13 +86,7 @@ h3 {
   transform: scale(1.05);
 }
 
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(to right, #1a1a1a, #0f0f0f);
-  border-radius: 15px;
-  margin-bottom: 3rem;
-}
+
 
 @keyframes fadeInUp {
   from {
@@ -129,19 +123,53 @@ h3 {
   margin-top: 0;
   font-weight: bold;
 }
-
-
-
-.hero {
+.hero-section {
   position: relative;
-  height: 400px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  border-radius: 15px;
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* Optional: darkens video for text clarity */
+  color: gold;
+  padding: 2rem;
+}
+
+.hero-overlay h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.hero-overlay p {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+
+
 
 .hero-image {
   position: absolute;
@@ -708,3 +736,7 @@ header .no-underline-nav li {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+
+
+

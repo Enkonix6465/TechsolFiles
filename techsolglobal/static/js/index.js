@@ -14,16 +14,17 @@ const observer = new IntersectionObserver(entries => {
 mvCards.forEach(card => observer.observe(card));
 
 // === 2. Auto Carousel (Image Slide) ===
-let currentIndex = 0;
+let currentIndex = totalImages - 1; // Start from the last image
 const totalImages = 10;
 const carouselContainer = document.getElementById("carousel-container");
 
 function slideImages() {
-  currentIndex++;
-  if (currentIndex >= totalImages) currentIndex = 0;
-  const offset = -(currentIndex * (250 + 30));
+  currentIndex--;
+  if (currentIndex < 0) currentIndex = totalImages - 1; // Loop back to the end
+  const offset = -(currentIndex * (250 + 30)); // Assuming 250px width + 30px gap
   carouselContainer.style.transform = `translateX(${offset}px)`;
 }
+
 setInterval(slideImages, 5000);
 slideImages(); // Initial load
 

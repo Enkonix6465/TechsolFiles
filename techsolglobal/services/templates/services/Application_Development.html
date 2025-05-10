@@ -1,46 +1,76 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Techsol | Application Development</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}"/>
   <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
-      </div>
-      <nav class="nav-center">
-    <!-- HTML -->
-  <ul class="nav-links relative">
-    <li><a href="{% url 'index:index' %}">Home</a></li>
-    <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  <link rel="stylesheet" href="{% static 'css/health.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/herocareers.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
   
-    <!-- Dropdown wrapper -->
-    <li class="dropdown">
-      <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-      <ul class="dropdown-menu">
-        <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-        <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-        <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-        <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-        <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-        <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-        <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-      </ul>
-    </li>
-    <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-    <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-     <li><a href="{% url 'contact:contact' %}" >Contant Us</a></li>
-  </ul>
-  </nav>
-    </div>
-  </header>
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
+
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
   <main class="cloud-container">
     <section class="intro-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">   
       <!-- Video Background -->
@@ -57,10 +87,8 @@
       </h2><br>
       <br>
       <p style="color:white; font-size: 2.1rem;">
-        <p>At Techsol Global, we build the future one line at a time. From robust enterprise-grade solutions to lightning-fast MVPs for startups, we design and develop applications that solve real-world problems with next-gen tech.</p>
-        <p><strong>We Build the Future, One Line at a Time</strong></p>
-        <p>Whether it's enterprise-grade software or startup MVPs, Techsol Global designs and develops applications that solve real-world problems with tech that's always one step ahead.</p>
-      </p>
+        We build future-ready apps that grow with you—secure, intelligent, and built to scale.
+         </p>
     </div>
     </section>
     
@@ -118,87 +146,84 @@
     </section> 
     <section class="service-cards">
       <!-- Card 1 -->
-      <div class="glass-card">
-        <div class="card-image">
-          <img src="{% static 'images/web-app.jpg' %}" alt="Web App Development" class="card-img" />
-          
-          <div class="overlay-text">Web App Development</div>
-        </div>
-        <div class="card-content">
-          <p class="highlight-description">Responsive, modern, and powerful applications built using the latest frontend and backend stacks.</p>
-          <ul class="highlight-list">
-            <li>Full-stack development (Angular, React, .NET, etc.)</li>
-            <li>Progressive Web Apps (PWA)</li>
-            <li>Cross-browser and device compatibility</li>
-            <br><br><br><br>
-          </ul>
-        </div>
-        <!-- Gold label for card 1 below and centered -->
-      
-        <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Web App Development</div>
-      </div>
+      <!-- Card: Custom Software Development -->
+<div class="glass-card">
+  <div class="card-image">
+    <img src="{% static 'images/custom-software.png' %}" alt="Custom Software" class="card-img" />
+    <div class="overlay-text">Custom Software</div>
+  </div>
+  <div class="card-content">
+    <p class="highlight-description">Tailored software built to meet unique business needs and processes with flexibility.</p>
+    <ul class="highlight-list">
+      <li>Requirement-based system architecture</li>
+      <li>Platform-independent solutions</li>
+      <li>Agile delivery & frequent updates</li>
+      <br><br><br><br>
+    </ul>
+  </div>
+  <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Custom Software</div>
+</div>
+
     
       <!-- Card 2 -->
-      <div class="glass-card">
-        <div class="card-image">
-          <img src="{% static 'images/mobile-app.jpg' %}" alt="Mobile App Development" class="card-img" />
-          
-          <div class="overlay-text">Mobile App Development</div>
-        </div>
-        <div class="card-content">
-          <p class="highlight-description">From native Android/iOS to cross-platform, our mobile solutions are sleek, fast, and user-loved.</p>
-          <ul class="highlight-list">
-            <li>Native & cross-platform builds (Flutter, React Native)</li>
-            <li>High-performance & low-latency apps</li>
-            <br><br><br><br><br>
-          </ul>
-        </div>
-        <!-- Gold label for card 2 below and centered -->
-        <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Mobile App Development</div>
-      
-      </div>
+      <!-- Card: Cross-Platform Development -->
+<div class="glass-card">
+  <div class="card-image">
+    <img src="{% static 'images/cross-platform.jpg' %}" alt="Cross Platform" class="card-img" />
+    <div class="overlay-text">Cross-Platform</div>
+  </div>
+  <div class="card-content">
+    <p class="highlight-description">Build once, run everywhere — seamless apps for Android, iOS, and web from a single codebase.</p>
+    <ul class="highlight-list">
+      <li>React Native / Flutter frameworks</li>
+      <li>Unified UI/UX design system</li>
+      <li>Optimized for all screen sizes</li>
+      <br><br><br><br>
+    </ul>
+  </div>
+  <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Cross-Platform</div>
+</div>
+
     
       <!-- Card 3 -->
-      <div class="glass-card">
-        <div class="card-image">
-          <img src="{% static 'images/web-app.jpg' %}" alt="Web App Development" class="card-img" />
-         
-          <div class="overlay-text">Enterprise Software</div>
-        </div>
-        <div class="card-content">
-          <p class="highlight-description">Robust and scalable enterprise apps designed to empower businesses and streamline operations.</p>
-          <ul class="highlight-list">
-            <li>Custom ERP/CRM systems</li>
-            <li>Secure authentication & role management</li>
-            <li>Modular and scalable architecture</li>
-            <br><br><br><br>
-          </ul>
-        </div>
-        <!-- Gold label for card 3 below and centered -->
-        <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Enterprise Software</div>
-    
-      </div>
+      <!-- Card: Cloud-Native Applications -->
+<div class="glass-card">
+  <div class="card-image">
+    <img src="{% static 'images/cloud-native.jpg' %}" alt="Cloud Native Apps" class="card-img" />
+    <div class="overlay-text">Cloud-Native Apps</div>
+  </div>
+  <div class="card-content">
+    <p class="highlight-description">Modern applications designed for scalability, resilience, and deployment in cloud ecosystems.</p>
+    <ul class="highlight-list">
+      <li>Serverless computing (AWS Lambda, Azure Functions)</li>
+      <li>Containerization with Docker & Kubernetes</li>
+      <li>Auto-scaling & load balancing</li>
+      <br><br><br><br>
+    </ul>
+  </div>
+  <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Cloud-Native</div>
+</div>
+
     
       <!-- Card 4 -->
-      <div class="glass-card">
-        <div class="card-image">
-          <img src="{% static 'images/web-app.jpg' %}" alt="Web App Development" class="card-img" />
-          
-          <div class="overlay-text">API & Integration</div>
-        </div>
-        <div class="card-content">
-          <p class="highlight-description">Seamless third-party integrations, secure APIs, and automation workflows to keep your app connected.</p>
-          <ul class="highlight-list">
-            <li>RESTful & GraphQL API development</li>
-            <li>Payment gateway & cloud service integration</li>
-            <li>Automations with Zapier, Webhooks, and more</li>
-            <br>
-          </ul>
-        </div>
-        <!-- Gold label for card 4 below and centered -->
-        <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">API & Integration</div>
-        
-      </div>
+      <!-- Card: Secure App Architecture -->
+<div class="glass-card">
+  <div class="card-image">
+    <img src="{% static 'images/secure-architecture.jpg' %}" alt="Secure Architecture" class="card-img" />
+    <div class="overlay-text">Secure Architecture</div>
+  </div>
+  <div class="card-content">
+    <p class="highlight-description">End-to-end secured applications with layered authentication, encryption, and safe data practices.</p>
+    <ul class="highlight-list">
+      <li>Role-based access control (RBAC)</li>
+      <li>OAuth 2.0, JWT & HTTPS protocols</li>
+      <li>Data validation & attack prevention</li>
+      <br><br><br><br>
+    </ul>
+  </div>
+  <div class="card-label" style="color: gold; -webkit-text-stroke: 0px black">Secure Architecture</div>
+</div>
+
     </section>
     
       </main>
@@ -211,7 +236,7 @@
 
     <!-- Part 2: Quick Links -->
     <div class="footer-part footer-quick-links">
-      <h3 class="footer-heading">Quick Links</h3>
+      <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
       <ul class="nav-links">
         <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
         <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
@@ -223,7 +248,7 @@
     </div>
     <!-- Part 3: Our Services -->
     <div class="footer-part footer-services">
-      <h3 class="footer-heading">Our Services</h3>
+      <h3 class="footer-heading"style="color: gold;">Our Services</h3>
       <ul class="services-links">
         <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
         <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -249,7 +274,7 @@
 </footer>
 <footer class="footer">
     <div class="footer-location-row">
-      <div class="footer-title">Our Location</div>
+      <div class="footer-title">Our Locations</div>
       <div class="location-scroll">
         <div class="location-item" 
              onmouseover="showLocationDetails('india-info')" 

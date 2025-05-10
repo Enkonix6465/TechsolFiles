@@ -1,55 +1,79 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="#home">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Webpage</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+  </head>
 
-</head>
-<body>
-  <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
-      <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    </div>
-    <nav class="nav-center">
-  <!-- HTML -->
-<ul class="nav-links no-underline-nav">
-  <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
-  <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
 
-  <!-- Dropdown wrapper -->
-  <li class="dropdown">
-  <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
-  <ul class="dropdown-menu">
-    <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-    <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-    <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-    <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-    <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-    <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-    <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-  </ul>
-</li>
-
- 
-  <li><a href="{% url 'industries:industries' %}">Industries</a></li>
-  <li><a href="{% url 'careers:career' %}" >Careers</a></li>
-   <li><a href="{% url 'contact:contact' %}" >Contact Us</a></li>
-</ul>
-
-</nav>
-  </div>
-</header>
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
+  
 <div class="marquee-container">
-  <div class="marquee">
-    Welcome to Techsol Global Limited — Delivering Tech Brilliance Globally | Reach us at admin@Techsol.in | Call us: +91-9108191003
+  <div class="marquee" style="color: gold;font-weight: bold; font-size: 1.2rem;">
+    Welcome to Techsol Global — Redefining Tech, One Solution at a Time | Reach us: admin@Techsol.in | +91-9108191003
   </div>
 </div>
 <section id="home" class="home-section" style="position: relative; overflow: hidden;">
@@ -62,13 +86,19 @@
 
   <!-- 💬 Content Over Video -->
   <div class="home-content">
-    <h2 class="home-title">Welcome to<br><span style="color: rgb(8, 100, 69);">Techsol Global Limited</span></h2>
-    
-    <p class="home-text">
-      <strong>Empowering innovation through cutting-edge technology and global solutions.
-We deliver excellence across industries with a commitment to quality, trust, and growth.</strong> .
+    <h2 class="home-title" style="font-size: 8rem; line-height: 1.2;">
+      Welcome to<br>
+      <span style="color: rgb(8, 100, 69); font-size: 4rem;">Techsol Global Limited</span>
+    </h2>
+  
+    <p class="home-text" style="font-size: 1.5rem; font-weight: 600; margin-top: 1rem;">
+      <strong>
+        Empowering innovation through cutting-edge technology and global solutions.
+        We deliver excellence across industries with a commitment to quality, trust, and growth.
+      </strong>
     </p>
   </div>
+  
   
 </section>
 <br>
@@ -79,7 +109,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="mv-card">
       <img src="{% static 'images/mission_logo.png' %}" alt="Mission Icon" class="mv-icon" />
       <h2 class="mv-title">Our Mission</h2>
-      <p class="mv-text">To innovate and deliver impactful tech solutions that transform businesses and uplift communities.</p>
+      <p class="mv-text">TechSol delivers smart, reliable tech solutions that simplify lives.</p>
 	  <h2 class="underline text-white">Read More</h2>
     </div>
   </a>
@@ -89,7 +119,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="mv-card">
       <img src="{% static 'images/vision_logo.png' %}" alt="Vision Icon" class="mv-icon" />
       <h2 class="mv-title">Our Vision</h2>
-      <p class="mv-text">To be a global leader in digital transformation, inspiring progress through technology.</p>
+      <p class="mv-text">TechSol aims to be the go-to hub for next-gen digital innovation.</p>
 	  <h2 class="underline text-white">Read More</h2>
     </div>
   </a>
@@ -98,7 +128,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="mv-card">
       <img src="{% static 'images/valores_logo.png' %}" alt="Values Icon" class="mv-icon" />
       <h2 class="mv-title">Our Values</h2>
-      <p class="mv-text">Integrity, Innovation, Collaboration, <br>and <br>Customer-Centric Excellence.</p>
+      <p class="mv-text">At TechSol, we stand for Innovation, Integrity,and Customer-Centricity.
+
+      </p>
 	  <h2 class="underline text-white">Read More</h2>
     </div>
   </a>
@@ -110,41 +142,40 @@ We deliver excellence across industries with a commitment to quality, trust, and
 
 <section class="carousel-wrapper">
   <div class="carousel-container" id="carousel-container">
-
-
-  <div class="carousel-slide">
-   <a href="{% url 'services:cloud' %}" class="slide-link">
-    <div class="slide-container">
-      <img src="{% static 'images/1.PNG' %}" alt="Cloud Services" />
-	  
-      <h1 class="slide-heading">Cloud Services</h1>
-	  <div class="text-overlay">
-	  <p class="slide-text">Empowering businesses to scale and innovate through secure, flexible, and cost-efficient cloud solutions.</p>
-	  </div>
+    <div class="carousel-slide">
+      <a href="{% url 'services:cloud' %}" class="slide-link">
+       <div class="slide-container">
+         <img src="{% static 'images/1.png' %}" alt="Cloud Services" />
+       
+         <h1 class="slide-heading">Cloud Services</h1>
+       
+       <p class="slide-text">Empowering businesses to scale and innovate through secure, flexible, and cost-efficient cloud solutions.</p>
+       </div>
+       
     </div>
-  </div>
-
-  <div class="carousel-slide">
-   <a href="{% url 'services:application_development' %}" class="slide-link">
-    <div class="slide-container">
-      <img src="{% static 'images/2.png' %}" alt="Application Development" />
-	  
-      <h1 class="slide-heading">Application Development</h1>
-	  <div class="text-overlay">
-	  <p class="slide-text">Transforming ideas into powerful digital experiences with seamless application development and proactive management.</p>
-	  </div>
-    </div>
-  </div>
+   
+     <div class="carousel-slide">
+      <a href="{% url 'services:application_development' %}" class="slide-link">
+       <div class="slide-container">
+         <img src="{% static 'images/2.png' %}" alt="Application Development" />
+       
+         <h1 class="slide-heading">Application Development</h1>
+     
+       <p class="slide-text">Transforming ideas into powerful digital experiences with seamless application development and proactive management.</p>
+       </div>
+       
+     </div>
+   
 
   <div class="carousel-slide">
   <a href="{% url 'services:cognitive_operations' %}" class="slide-link">
     <div class="slide-container">
       <img src="{% static 'images/3.png' %}" alt="Cognitive Operations" />
       <h1 class="slide-heading">Cognitive Operations</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Enhancing operational efficiency and decision-making with AI-powered solutions that drive smarter business processes.</p>
 	  </div>
-    </div>
+    
   </div>
 
   <div class="carousel-slide">
@@ -152,9 +183,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="slide-container">
       <img src="{% static 'images/4.png' %}" alt="Data & Analytics" />
       <h1 class="slide-heading">Data & Analytics</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Unlocking the full potential of data by delivering actionable insights and fostering data-driven growth strategies.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -164,10 +195,10 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/5.png' %}" alt="Network Solutions" />
 	  
       <h1 class="slide-heading">Network Solutions</h1>
-	  <div class="text-overlay">
+	 
 	  <p class="slide-text">Building resilient, high-performance network infrastructures that enable seamless connectivity and secure communication.</p>
 	  </div>
-    </div>
+    
   </div>
 
   <div class="carousel-slide">
@@ -176,9 +207,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/6.png' %}" alt="IT Consulting" />
 	  
       <h1 class="slide-heading">IT Consulting</h1>
-	  <div class="text-overlay">
+	 
 	  <p class="slide-text">Providing expert guidance and innovative solutions to help businesses optimize technology, streamline operations, and achieve strategic goals.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -188,9 +219,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/7.png' %}" alt="Software Training" />
 	  
       <h1 class="slide-heading">Software Training</h1>
-	  <div class="text-overlay">
+	
 	  <p class="slide-text">Equipping teams with the knowledge and skills to excel through comprehensive software training tailored to your business needs.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -201,9 +232,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/8.png' %}" alt="Cloud Services" />
 	  
       <h1 class="slide-heading">Cloud Services</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Empowering businesses to scale and innovate through secure, flexible, and cost-efficient cloud solutions.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -213,9 +244,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/9.png' %}" alt="Application Development" />
 	  
       <h1 class="slide-heading">Application Development</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Transforming ideas into powerful digital experiences with seamless application development and proactive management.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -224,9 +255,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="slide-container">
       <img src="{% static 'images/10.png' %}" alt="Cognitive Operations" />
       <h1 class="slide-heading">Cognitive Operations</h1>
-	  <div class="text-overlay">
+	
 	  <p class="slide-text">Enhancing operational efficiency and decision-making with AI-powered solutions that drive smarter business processes.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -235,7 +266,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
     <div class="slide-container">
       <img src="{% static 'images/11.png' %}" alt="Data & Analytics" />
       <h1 class="slide-heading">Data & Analytics</h1>
-	  <div class="text-overlay">Unlocking the full potential of data by delivering actionable insights and fostering data-driven growth strategies.</p>
+      <p class="slide-text">Unlocking the full potential of data by delivering actionable insights and fostering data-driven growth strategies.</p>
 	  </div>
     </div>
   </div>
@@ -246,9 +277,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/12.png' %}" alt="Network Solutions" />
 	  
       <h1 class="slide-heading">Network Solutions</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Building resilient, high-performance network infrastructures that enable seamless connectivity and secure communication.AI-driven automation to simplify IT operations.</p>
-	  </div>
+	 
     </div>
   </div>
 
@@ -258,9 +289,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/13.png' %}" alt="IT Consulting" />
 	  
       <h1 class="slide-heading">IT Consulting</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Providing expert guidance and innovative solutions to help businesses optimize technology, streamline operations, and achieve strategic goals.</p>
-	  </div>
+	  
     </div>
   </div>
 
@@ -270,9 +301,9 @@ We deliver excellence across industries with a commitment to quality, trust, and
       <img src="{% static 'images/14.png' %}" alt="Software Training" />
 	  
       <h1 class="slide-heading">Software Training</h1>
-	  <div class="text-overlay">
+	  
 	  <p class="slide-text">Equipping teams with the knowledge and skills to excel through comprehensive software training tailored to your business needs.</p>
-	  </div>
+	 
     </div>
   </div>
 </div>
@@ -291,8 +322,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
   <div class="text-center mb-8">
     <h2 class="text-3xl font-bold text-gray-800">A Trusted Software Development Partner</h2>
     <p class="text-gray-600 text-lg mt-4">
-      Building lasting relationships with innovative companies worldwide. <br>
-      Together, we deliver solutions that shape the future.
+      Partnering globally to deliver impactful tech solutions.
     </p>
   </div>
 <br>
@@ -333,8 +363,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
   <div class="content-wrapper">
     <h2>Why Choose <span>Techsol Global Limited?</span></h2>
     <p>
-      At Techsol, we don’t just build tech — we build trust. Our team crafts tailored software with innovation,
-      precision, and passion. We're not just coders, we're problem-solvers with purpose. 
+      At TechSol, we turn vision into reality with cutting-edge technology.<br>Our team is driven by passion, precision, and the pursuit of excellence.
     </p>
 
     <div class="stats-grid">
@@ -344,15 +373,17 @@ We deliver excellence across industries with a commitment to quality, trust, and
       </div>
       <div class="stat-box">
         <h3 class="counter" data-target="250">0</h3>
-        <p>A Team That Turns Every Day Into a Milestone.</p>
+        <p>A Team That Transforms Every Day into a Milestone.</p>
       </div>
       <div class="stat-box">
         <h3 class="counter" data-target="400">0</h3>
-        <p>Our True Success Lies in the Satisfaction of Our Clients.</p>
+        <p>Our True Success Lies in the Satisfaction and Success of Our Clients.</p>
       </div>
       <div class="stat-box">
         <h3 class="counter" data-target="3">0</h3>
-        <p>Expanding Horizons with Offices Nationwide.</p>
+        <p>Expanding Our Reach with Offices Nationwide.
+
+        </p>
       </div>
     </div>
   </div>
@@ -392,14 +423,14 @@ We deliver excellence across industries with a commitment to quality, trust, and
 <!-- Client Testimonials Section -->
 <section id="testimonials" class="testimonials-section">
   <h1 class="testimonials-title">What Our Clients Say</h1>
-  <p class="testimonials-subtitle">Real stories from real clients who’ve experienced transformation with us.</p>
+  <p class="testimonials-subtitle">"Real stories from those who’ve experienced genuine transformation. Hear firsthand how Techsol Global Limited is driving success, one solution at a time."</p>
 
   <div class="testimonial-cards">
 
     <div class="testimonial-card">
-      <p class="testimonial-text">“Their team delivered a powerful backend system in record time. Extremely reliable and committed.”</p>
+      <p class="testimonial-text">"Techsol's cloud solutions have transformed how we handle data. They seamlessly migrated our operations to the cloud, boosting efficiency and lowering costs. We couldn't be more satisfied."</p>
 
-      <h3 class="testimonial-author">– Karan B., Head of Tech at FinForce</h3>
+      <h3 class="testimonial-author">–  Ravi S., CTO at AutoSolutions Ltd.</h3>
     </div>
 
     <div class="testimonial-card">
@@ -439,7 +470,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
   <div class="footer-container">
     <!-- Part 2: Quick Links -->
 <div class="footer-part footer-quick-links">
-  <h3 class="footer-heading">Quick Links</h3>
+  <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
   <ul class="nav-links">
     <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
     <li><a href="{% url 'aboutus:about' %}" >About Us</a></li>
@@ -454,7 +485,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
 
     <!-- Part 3: Our Services -->
 <div class="footer-part footer-services">
-  <h3 class="footer-heading">Our Services</h3>
+  <h3 class="footer-heading" style="color: gold;">Our Services</h3>
   <ul class="services-links">
     <li><a href="{% url 'services:cloud' %}" >Cloud</a></li>
     <li><a href="{% url 'services:application_development' %}" >Application Development & Management</a></li>
@@ -483,7 +514,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
 
 <footer class="footer">
   <div class="footer-location-row">
-    <div class="footer-title">Our Location</div>
+    <div class="footer-title">Our Locations</div>
     <div class="location-scroll">
       <div class="location-item" 
            onmouseover="showLocationDetails('india-info')" 
@@ -553,20 +584,20 @@ We deliver excellence across industries with a commitment to quality, trust, and
 
     <!-- Right: Social Icons -->
 <div class="footer-right">
-  <a href="https://www.linkedin.com/in/yasarapu-prudhviraj-553168291/" target="_blank" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/company/techsol-global-ltd/" target="_blank" aria-label="LinkedIn">
     <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
   </a>
   
-  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+  <a href="https://www.facebook.com/profile.php?id=61576252915760" target="_blank" aria-label="Facebook">
     <img src="{% static 'images/facebook.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
   </a>
-  <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+  <a href="https://youtube.com/@techsolgloballtd.company?si=aAAl0gtbmzfWo5le" target="_blank" aria-label="YouTube">
     <img src="{% static 'images/youtube.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
   </a>
-  <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+  <a href="https://twitter.com/GlobalLtd78481" target="_blank" aria-label="Twitter">
     <img src="{% static 'images/twitter.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
   </a>
-  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+  <a href="https://www.instagram.com/techsol_global_ltd/" target="_blank" aria-label="Instagram">
     <img src="{% static 'images/instagram.png' %}" alt="LinkedIn" width="34" height="34" class="footer-icon" />
   </a>
 </div>
@@ -575,6 +606,7 @@ We deliver excellence across industries with a commitment to quality, trust, and
  </section>
 </footer>
   <script src="{% static 'js/index.js' %}"></script>
+  
 </body>
 </html>
 

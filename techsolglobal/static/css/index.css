@@ -282,8 +282,6 @@ header {
   margin: 0 auto 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
-
-
 .home-text {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -617,14 +615,8 @@ bottom: 10px; /* Push from bottom */
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-.slide-text {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #444;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
 .slide-container {
   position: relative;
   width: 100%;
@@ -658,12 +650,8 @@ bottom: 10px; /* Push from bottom */
   font-weight: bold;
 }
 
-.slide-text {
-  font-size: 1rem;
-  margin: 0;
-  color: white;
-  text-align: center;
-}
+
+
 
 
 .mv-card-link {
@@ -2024,5 +2012,6 @@ h2.text-white {
 .location-item {
   position: relative;
 }
+
 
 

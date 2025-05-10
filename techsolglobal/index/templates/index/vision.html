@@ -1,50 +1,74 @@
 {% load static %}
+<nav class="navbar" id="mainNavbar">
+  <a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a>
+  <a href="{% url 'aboutus:about' %}">About Us</a>
+  <a href="{% url 'services:services' %}">Services</a>
+  <a href="{% url 'industries:industries' %}">Industries</a>
+  <a href="{% url 'careers:career' %}">Careers</a>
+  <a href="{% url 'contact:contact' %}">Contact Us</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Webpage</title>
-  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-</head>
-<body>
-  <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="{% static 'images/logo.png' %} " alt="Company Logo" />
-    </div>
-    <nav class="nav-center">
-  <!-- HTML -->
-<ul class="nav-links relative">
-  <li><a href="{% url 'index:index' %}">Home</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Webpage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}" media="only screen and (max-width: 768px)">
+  </head>
 
-  <!-- Dropdown wrapper -->
-  <li class="dropdown">
-    <a href="{% url 'services:services' %}" class="hover:text-teal-400 transition">Services</a>
-
-    <!-- Dropdown menu -->
-    <ul class="dropdown-menu">
-      <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
-      <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
-      <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
-      <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
-      <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
-      <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
-      <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
-    </ul>
-  </li>
-
-  <li><a href="{% url 'industries:industries' %}" class="hover:text-teal-400 transition">Industries</a></li>
-  <li><a href="{% url 'careers:career' %}" class="hover:text-teal-400 transition">Careers</a></li>
-  <li><a href="{% url 'contact:contact' %}" class="hover:text-teal-400 transition">Contact Us</a></li>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo" />
+          <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+        </div>
+       
+        
+          
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
   
-</ul>
+        <!-- Navbar (for desktop view) -->
+        <nav class="nav-center">
+          <ul class="nav-links no-underline-nav">
+            <li><a href="{% url 'index:index' %}">Home</a></li>
+            <li><a href="{% url 'aboutus:about' %}">About Us</a></li>
+  
+            <!-- Dropdown wrapper -->
+            <li class="dropdown">
+              <a href="{% url 'services:services' %}" class="dropdown-link">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'services:cloud' %}">Cloud</a></li>
+                <li><a href="{% url 'services:application_development' %}">Application_Development</a></li>
+                <li><a href="{% url 'services:cognitive_operations' %}">Cognitive Business Operations</a></li>
+                <li><a href="{% url 'services:data_analytics' %}">Data & Analytics</a></li>
+                <li><a href="{% url 'services:network_solutions' %}">Network Solutions & Services</a></li>
+                <li><a href="{% url 'services:it_advisory' %}">IT Consulting</a></li>
+                <li><a href="{% url 'services:software_training' %}">Software Training</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="{% url 'industries:industries' %}">Industries</a></li>
+            <li><a href="{% url 'careers:career' %}">Careers</a></li>
+            <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Your mobile navigation -->
+    <!-- Mobile Navbar (Hidden by default) -->
 
-</nav>
-  </div>
-</header>
-<section id="home" class="home-section" style="position: relative; overflow: hidden;">
+    <script src="{% static 'js/hamburger.js' %}"></script> <!-- Add your JS file for hamburger toggle -->
+  </body>
+  
 <!--------------------------------------------above part is releated to header--------------------------------------->
 <head>
   <meta charset="UTF-8" />
@@ -160,7 +184,7 @@
 
     <!-- Part 2: Quick Links -->
 <div class="footer-part footer-quick-links">
-  <h3 class="footer-heading">Quick Links</h3>
+  <h3 class="footer-heading"style="color: gold;">Quick Links</h3>
   <ul class="nav-links">
     <li><a href="{% url 'index:index' %}" class="hover:text-teal-400 transition">Home</a></li>
     <li><a href="{% url 'aboutus:about' %}" class="hover:text-teal-400 transition">About Us</a></li>
@@ -173,7 +197,7 @@
 
     <!-- Part 3: Our Services -->
 <div class="footer-part footer-services">
-  <h3 class="footer-heading">Our Services</h3>
+  <h3 class="footer-heading"style="color: gold;">Our Services</h3>
   <ul class="services-links">
     <li><a href="{% url 'services:cloud' %}" class="hover:text-teal-400 transition">Cloud</a></li>
     <li><a href="{% url 'services:application_development' %}" class="hover:text-teal-400 transition">Application Development & Management</a></li>
@@ -202,7 +226,7 @@
 </footer>
 <footer class="footer">
   <div class="footer-location-row">
-    <div class="footer-title">Our Location</div>
+    <div class="footer-title">Our Locations</div>
     <div class="location-scroll">
       <div class="location-item" 
            onmouseover="showLocationDetails('india-info')" 
