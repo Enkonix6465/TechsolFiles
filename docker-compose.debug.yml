@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:15
+    container_name: techsol_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: techsol_db
+      POSTGRES_USER: techsol_user
+      POSTGRES_PASSWORD: techsol_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    container_name: techsol_django
+    build:
+      context: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/techsol
+      - static_volume:/techsol/staticfiles
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DJANGO_DB_NAME: techsol_db
+      DJANGO_DB_USER: techsol_user
+      DJANGO_DB_PASSWORD: techsol_pass
+      DJANGO_DB_HOST: db
+      DJANGO_DB_PORT: 5432
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres_data:
+  static_volume:
