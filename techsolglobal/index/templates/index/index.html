@@ -319,8 +319,23 @@
 
 <!-- Trusted Partners Section with Smooth Scrolling -->
 <section class="trusted-partners-section bg-white py-12">
+  <h2>Trusted Partners Brands</h2><br>
+  <div class="partners">
+    <a href="https://www.blupacetech.com/" target="_blank" class="partner-logo">
+      <img src="{% static 'images/BlupaceTechlogo.png' %}" alt="Bluepace Tech" style="height: 100px; width: auto; margin-right: 20px;">
+    </a>
+    <a href="https://www.adroit.global" target="_blank" class="partner-logo">
+      <img src="{% static 'images/adroitlogo.png' %}" alt="Adroit Global Ltd" style="height: 100px; width: auto; margin-right: 20px;">
+    </a>
+    <a href="https://www.a2cloud.co.uk" target="_blank" class="partner-logo">
+      <img src="{% static 'images/a2cloudlogo.png' %}" alt="A2 Cloud Solutions" style="height: 100px; width: auto;">
+    </a>
+</div>
+
+
+  <br><br><br>
   <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-gray-800">A Trusted Software Development Partner</h2>
+    <h2 class="text-3xl font-bold text-gray-800">Trusted Software Development Partner</h2>
     <p class="text-gray-600 text-lg mt-4">
       Partnering globally to deliver impactful tech solutions.
     </p>
@@ -516,6 +531,7 @@
   <div class="footer-location-row">
     <div class="footer-title">Our Locations</div>
     <div class="location-scroll">
+
       <div class="location-item" 
            onmouseover="showLocationDetails('india-info')" 
            onmouseout="hideLocationDetails('india-info')" 
@@ -523,18 +539,18 @@
         <img src="https://flagcdn.com/in.svg" alt="India" />
         <span>India</span>
         <div class="location-info" id="india-info">
-          <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
+          <p>1st Floor, MSR Tech Park, Novel Office, Marathahalli, Bangalore, Karnataka, 560036</p>
         </div>
       </div>
 
       <div class="location-item" 
            onmouseover="showLocationDetails('usa-info')" 
            onmouseout="hideLocationDetails('usa-info')" 
-           onclick="openPopup('USA', 'Techsol USA, New York, USA')">
+           onclick="openPopup('USA', 'Techsol USA, Los Angeles, USA')">
         <img src="https://flagcdn.com/us.svg" alt="USA" />
         <span>USA</span>
         <div class="location-info" id="usa-info">
-          <p>250 Vesey St, New York, NY 10281</p>
+          <p>555 West 5th Street, Suite 2700, Los Angeles, CA 90013-1010, United States</p>
         </div>
       </div>
 
@@ -545,20 +561,10 @@
         <img src="https://flagcdn.com/gb.svg" alt="UK" />
         <span>UK</span>
         <div class="location-info" id="uk-info">
-          <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
+          <p>30 Churchill Place, Canary Wharf, London E14 5RE, United Kingdom</p>
         </div>
       </div>
 
-      <div class="location-item" 
-           onmouseover="showLocationDetails('australia-info')" 
-           onmouseout="hideLocationDetails('australia-info')" 
-           onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
-        <img src="https://flagcdn.com/au.svg" alt="Australia" />
-        <span>Australia</span>
-        <div class="location-info" id="australia-info">
-          <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -573,7 +579,7 @@
 </footer>
 
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 <footer class="site-footer">
   <div class="footer-bottom">
@@ -605,7 +611,8 @@
   </div>
  </section>
 </footer>
-  <script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/location.js' %}"></script>
   
 </body>
 </html>

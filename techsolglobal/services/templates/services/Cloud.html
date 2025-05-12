@@ -304,66 +304,58 @@
   </div>
 </footer>
 <footer class="footer">
-    <div class="footer-location-row">
-      <div class="footer-title">Our Location</div>
-      <div class="location-scroll">
-        <div class="location-item" 
-             onmouseover="showLocationDetails('india-info')" 
-             onmouseout="hideLocationDetails('india-info')" 
-             onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
-          <img src="https://flagcdn.com/in.svg" alt="India" />
-          <span>India</span>
-          <div class="location-info" id="india-info">
-            <p>235,Binnamangala,13th Cross Rd,Indiranagar,Bengaluru</p>
-          </div>
-        </div>
+  <div class="footer-location-row">
+    <div class="footer-title">Our Locations</div>
+    <div class="location-scroll">
 
-        <div class="location-item" 
-             onmouseover="showLocationDetails('usa-info')" 
-             onmouseout="hideLocationDetails('usa-info')" 
-             onclick="openPopup('USA', 'Techsol USA, New York, USA')">
-          <img src="https://flagcdn.com/us.svg" alt="USA" />
-          <span>USA</span>
-          <div class="location-info" id="usa-info">
-            <p>250 Vesey St, New York, NY 10281</p>
-          </div>
-        </div>
-
-        <div class="location-item" 
-             onmouseover="showLocationDetails('uk-info')" 
-             onmouseout="hideLocationDetails('uk-info')" 
-             onclick="openPopup('UK', 'Techsol UK, London, UK')">
-          <img src="https://flagcdn.com/gb.svg" alt="UK" />
-          <span>UK</span>
-          <div class="location-info" id="uk-info">
-            <p>123 Piccadilly St, London W1J 9HS, United Kingdom</p>
-          </div>
-        </div>
-
-        <div class="location-item" 
-             onmouseover="showLocationDetails('australia-info')" 
-             onmouseout="hideLocationDetails('australia-info')" 
-             onclick="openPopup('Australia', 'Techsol Australia, Sydney, Australia')">
-          <img src="https://flagcdn.com/au.svg" alt="Australia" />
-          <span>Australia</span>
-          <div class="location-info" id="australia-info">
-            <p>101 Collins Street, Melbourne VIC 3000, Australia</p>
-          </div>
+      <div class="location-item" 
+           onmouseover="showLocationDetails('india-info')" 
+           onmouseout="hideLocationDetails('india-info')" 
+           onclick="openPopup('India', 'MITS, Madanapalle, Andhra Pradesh, India')">
+        <img src="https://flagcdn.com/in.svg" alt="India" />
+        <span>India</span>
+        <div class="location-info" id="india-info">
+          <p>1st Floor, MSR Tech Park, Novel Office, Marathahalli, Bangalore, Karnataka, 560036</p>
         </div>
       </div>
-    </div>
 
-    <!-- Popup -->
-    <div class="popup-overlay" id="popup">
-      <div class="popup-card">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h3 id="popup-title">Location Title</h3>
-        <p id="popup-address">Address details will appear here.</p>
+      <div class="location-item" 
+           onmouseover="showLocationDetails('usa-info')" 
+           onmouseout="hideLocationDetails('usa-info')" 
+           onclick="openPopup('USA', 'Techsol USA, Los Angeles, USA')">
+        <img src="https://flagcdn.com/us.svg" alt="USA" />
+        <span>USA</span>
+        <div class="location-info" id="usa-info">
+          <p>555 West 5th Street, Suite 2700, Los Angeles, CA 90013-1010, United States</p>
+        </div>
       </div>
+
+      <div class="location-item" 
+           onmouseover="showLocationDetails('uk-info')" 
+           onmouseout="hideLocationDetails('uk-info')" 
+           onclick="openPopup('UK', 'Techsol UK, London, UK')">
+        <img src="https://flagcdn.com/gb.svg" alt="UK" />
+        <span>UK</span>
+        <div class="location-info" id="uk-info">
+          <p>30 Churchill Place, Canary Wharf, London E14 5RE, United Kingdom</p>
+        </div>
+      </div>
+
     </div>
-  </footer>
-  
-  <br><br><br><br><br><br>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-card">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popup-title">Location Title</h3>
+      <p id="popup-address">Address details will appear here.</p>
+    </div>
+  </div>
+</footer>
+
+
+<br><br><br><br><br><br><br><br>
 
 <footer class="site-footer">
   <div class="footer-bottom">
@@ -378,6 +370,8 @@
 <script src="{% static 'js/servicejs.js' %}"></script>
 <script src="{% static 'js/style.js' %}"></script>
 <script src="{% static 'js/servicesjs.js' %}"></script>
+<script src="{% static 'js/location.js' %}"></script>
+
 
 
 </body>
